@@ -275,6 +275,23 @@ We can discuss what is automated, what is not, and how that can be improved. Mor
 what are the production services and software offered by HPC, and can we trace their entire pipeline
 from source code to production deployment? Is there room for improvement?
 
+## Mapping the Space
+
+During this exercise, I realized that there are two different communities that come together to form what we might call the HPC community,
+and you might guess this comes down to users (researchers, research software engineers) and admins (system administrators and research software engineers).
+You'll notice that research software engineers can be part of both groups, which is why I think the profession has been helpful
+to shed light on the needs of the user base. Our two groups:
+
+ - users
+ - admins
+ 
+can view the same ecosystem in very different ways. The two groups can also have some overlap in shared value for software or services, however
+not everything has perfect overlap. In many cases, even the user community is broken into smaller user communities based on domain of science, or
+preferred tools. For example, a physics group at a national lab might use a lot of MPI or Fortran codes, while a neuroimaging lab's bread and butter
+is launching SLURM jobs with a container technology. When I realized this distinction, I decided that I wanted to try
+to map out the space, meaning identifying the software and tools that are shared between the groups, and then those that are
+perhaps used widely by researchers that don't have a traditional home in HPC.
+
 ## Summary of Opportunities
 
 The following areas of RSE-ops are not well developed, and we have opportunity to build or seek out tools to fill the space.
