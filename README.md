@@ -46,7 +46,7 @@ You will typically find individuals practicing RSE-ops at academic institutions 
 > application of devops to the cloud then aren't the clouds cloud native by definitoin? Also what
 > about IaaS, PaaS, VMs, etc. -- lots of levels but maybe that's too much for this document.
 
-While some of these clouds have attempted to re-brand HPC [^7],
+While early efforts of some of these clouds attempted to re-brand HPC [^7],
 the effort is misleading because cloud-deployed services that mimic a high performance computing environment are not one and the same. This point will be fleshed out in the next section that does a detailed comparison between HPC and cloud.
 
 > I think this point needs some refinement b/c clouds are offering legit HPC. There are still
