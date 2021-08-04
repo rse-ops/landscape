@@ -16,7 +16,7 @@ for the purposes of speed and efficiency, reliability, scale, and collaboration.
 ## What is RSE-ops?
 
 If DevOps is the intersection of  "Developer" and "Operations," then how does this concept map to high performance computing? The answer is RSE-ops, or the intersection of Research Software Engineering and Operations. Research Software Engineers (RSEs) are the individuals writing code for scientific software, and supporting resarchers to use codes on high performance computing systems.
-RSE-ops, then, generally refers to best practices for development and operations of scientific software, which typically happens in a high performance computing environment.
+RSE-ops, then, generally refers to best practices for development and operations of scientific software.
 
 > I have wondered if this is true -- aren't there lots of non-HPC RSE's?
 
