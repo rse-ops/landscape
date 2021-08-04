@@ -47,7 +47,7 @@ You will typically find individuals practicing RSE-ops at academic institutions 
 > about IaaS, PaaS, VMs, etc. -- lots of levels but maybe that's too much for this document.
 
 While early efforts of some of these clouds attempted to re-brand HPC [^7],
-the effort is misleading because cloud-deployed services that mimic a high performance computing environment are not one and the same. This point will be fleshed out in the next section that does a detailed comparison between HPC and cloud.
+progress has been made to the point that the gap between cloud and HPC is narrowing, and HPC centers are able to take advantage of cloud technologies, and vice versa. There are still subtle differences, some of which will be outlined in the next sections.
 
 > I think this point needs some refinement b/c clouds are offering legit HPC. There are still
 > differences but the gap is narrowing, and there are advantages to not doing traditional HPC...
