@@ -31,7 +31,7 @@ are well established for RSE-ops, and which require further development. We can 
 
 ### What are the goals of each?
 
-Arguably, the goals of DevOps are to provide applications and services, typically web-based. The goals of RSE-ops are to sometimes provide services for scientific applications, but more-so to provide infrastructure and means to run, develop, and distribute, scientific software. RSE-ops, then, is for research software and services, while DevOps is typically for commercial software and services. This does not mean, however, that RSEs are never involved with DevOps, nor that industry software engineers are never working on research software.
+Arguably, the goals of DevOps are to provide applications and services, typically web-based. The goals of RSE-ops are to sometimes provide services for scientific applications, but more-so to provide infrastructure and means to run, develop, and distribute, scientific software. RSE-ops, then, is for research software and services, while DevOps is typically for more widely available, persistent software and services. This does not mean, however, that RSEs are never involved with DevOps, nor that industry software engineers are never working on research software.
 
 > TG: I am not sure about the "commercial" designation. I might just say "perstent services" as
 > DevOps is used not just in commercial environments... it's used for lots of organizations and
