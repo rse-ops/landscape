@@ -1,0 +1,158 @@
+- universe: Research Software Engineer (RSE-ops)
+  description: Includes system administrators, research software engineers, and other staff that support a research ecosystem.  This does not include domain-specific software, is not limited to running on HPC, and it only includes open source.
+  categories:
+    - name: Containerization
+      slug: containers
+      entries:
+        - name: Docker
+          img: docker.png
+        - name: Charliecloud
+          img: charliecloud.png
+        - name: Shifter
+          img: shifter.png 
+        - name: Singularity
+          img: singularity.svg
+        - name: Podman
+          img: podman.png
+
+    - name: Version Control
+      slug: vcs
+      entries:
+        - name: git
+          img: git.png
+        - name: subversion
+          img: subversion.png
+        - name: mercurial
+          img: mercurial.png
+
+    - name: Compilers
+      slug: compilers
+      entries:
+        - name: gcc
+          img: gcc.svg
+        - name: intel
+          img: intel.png
+        - name: cce
+          img: cray.png
+        - name: pgi
+          img: pgi.png
+        - name: clang
+          img: clang.jpeg
+        - name: mpicc    
+          img: mpicc.png
+
+    - name: Programming Languages
+      slug: languages
+      entries:
+        - name: Python
+          img: python.png
+        - name: R
+          img: r.jpeg
+        - name: Julia
+          img: julia.png
+        - name: Go 
+          img: go.png
+  
+    - name: Database
+      slug: db
+      entries:
+        - name: MariaDB
+          img: maria.png
+        - name: PostgreSQL
+          img: postgres.png
+        - name: MySQL
+          img: mysql.png
+        - name: MongoDB
+          img: mongo.png
+        - name: Sqlite
+          img: sqlite.png
+        - name: Redis
+          img: redis.png
+        - name: Hadoop
+          img: hadoop.jpg
+        - name: Neo4j
+          img: neo.png
+        - name: Cassandra
+          img: cassandra.png
+        - name: CouchDB
+          img: couch.png
+
+    - name: Orchestration and Scheduling
+      slug: scheduling
+      entries:
+        - name: SLURM
+          img: slurm.png
+        - name: Torque
+          img: torque.png
+        - name: Kubernetes
+          img: k8.png
+        - name: HTCondor
+          img: htcondor.png
+    
+    - name: Building, Packaging, Application Delivery
+      slug: builds
+      entries:
+        - name: CMake
+          img: cmake.png
+        - name: Conda/Anaconda
+          img: anaconda.png
+        - name: Environment Modules
+          img: environment-modules.png
+        - name: Lmod
+          img: lmod.png
+        - name: PyPi (pip)
+          img: pypi.jpg
+        - name: Spack
+          img: spack.svg
+
+    - name: Streaming and Messaging
+      slug: message
+      entries:
+        - name: Spark
+          img: spark.png
+        - name: openmpi
+          img: mpicc.png
+        - name: mvapich
+          img: mvapich.png
+        
+    - name: Monitoring and Checkpointing
+      slug: monitor
+      entries:
+        - name: dmtcp
+          img: dmtcp.png
+        - name: Prometheus
+          img: prometheus.png
+        - name: Grafana
+          img: grafana.png
+
+    - name: Web Interfaces
+      slug: web
+      entries:
+        - name: Open OnDemand
+          img: ondemand.jpg
+        - name: Jupyter Notebooks
+          img: jupyter.png
+
+    - name: Continuous Integration and Delivery
+      slug: ci
+      entries:
+        - name: GitLab
+          img: gitlab.png
+        - name: CircleCI
+          img: circle.png
+        - name: GitHub Actions
+          img: gha.png
+        - name: Jenkins
+          img: jenkins.png
+
+# testing
+# scaling
+# dependency management
+# containers
+# community standards
+# continuous deployment
+# monitoring
+# security
+# vampir
+# arm ddt
+# profiling/tracing: Score-PI, Tau.  LLVM is a game changer, starting with its license :blush:
