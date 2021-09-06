@@ -8,5 +8,8 @@ permalink: /about/follow-devops
 
 ## Why Can't RSE-ops Follow DevOps?
 
+<div class="card">
+
 {% include paper/follow-devops.html %}
 
+</div>
