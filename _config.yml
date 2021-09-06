@@ -27,6 +27,7 @@ baseurl: "/rse-ops"
 permalink: /:year/:title/
 markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
+repo: https://github.com/vsoch/rse-ops
 
 # Collections
 collections:
