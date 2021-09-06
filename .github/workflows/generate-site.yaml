@@ -21,7 +21,7 @@ jobs:
           git status
 
       - name: Deploy to gh-pages
-        #if: (github.event_name == 'push')
+        if: (github.event_name == 'push')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
