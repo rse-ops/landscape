@@ -4,28 +4,11 @@ title: RSE-ops
 permalink: /
 ---
 
-<ul id="filters" class="clearfix">
-  <li><span class="filter active" data-filter="{% for universe in site.data.rse-opts %}{% for category in universe.categories %}.{{ category.slug }} {% endfor %}{% endfor %}">all</span></li>
-{% for universe in site.data.rse-opts %}{% for category in universe.categories %}<li><span class="filter" data-filter=".{{ category.slug }}">{{ category.slug }}</span></li>{% endfor %}{% endfor %}
-</ul>
+{% include main_toc.html %}
 
-<div id="portfoliolist">
+## The RSE-ops Landscape
 
-{% for universe in site.data.rse-opts %}{% for category in universe.categories %}{% for tool in category.entries %}
-  <div class="portfolio {{ category.slug }} all" data-cat="{{ category.slug }}">
-    <div class="portfolio-wrapper">
-      <img src="{% if tool.img %}{{site.baseurl}}/tools/{{ tool.img }}{% else %}https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Color_icon_orange.svg/250px-Color_icon_orange.svg.png{% endif %}" alt="" />
-      <div class="label">
-   <div class="label-text">
-     <a class="text-title">{{ tool.name }}</a>
-       <span class="text-category">{{ category.name }}</span>
-      </div>
-     <div class="label-bg"></div>
-    </div>
-  </div>
-</div>
-{% endfor %}{% endfor %}{% endfor %}
-</div>
+{% include paper/abstract.md %}
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/script.js"></script>
+
+<p style="color:purple">This site is under development, not completely styled (and a little ugly!) so stay tuned and come back later for updates!</p>

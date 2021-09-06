@@ -1,0 +1,34 @@
+\section{Summary of Opportunities}
+
+The following areas of RSE-ops are not well developed, and we have opportunity to build or seek out tools to fill the space.
+
+\begin{itemize}
+\item \textbf{Web Applications}: Development framework for interactive (browser based) applications for HPC. This relies on being able to ensure secure access in a browser.
+\item \textbf{Automated Scaling}:  Being able to scale a job, task, or service without thinking about it.
+\item \textbf{On Demand Resources}: An HPC user should theoretically be able to request a custom resource, and "throw it away" when done. For HPC an administrative team would still need to monitor and maintain the resources, but to the user there could be a more interactive, customized experience. E.g., "I want an instance with this amount of memory, storage, and with this software installed. And I want to customize and request it in a web interface." While traditional batch systems can support this kind of request, what they aren't designed for is on-demand computing. Batch systems expect jobs that take a long time, and they aren't responsive.
+
+% - [ref](https://scholar.google.com/citations?user=ocvPDcsAAAAJ) Kate Keahy has done a lot of work on this at ANL, specifically talking about the distinction between HPC and infrastructure workloads and means to combine them.
+
+\item \textbf{Continuous Integration}: Application developers on HPC should have easy access to run tests on clusters, which can be difficult to do. Some national labs have workflows that integrate HPC with CI (e.g., GitLab) and other academic institutions are nowhere near this kind of integration.
+
+\item \textbf{Dependency Management}: With spack, easybuild, and containers, we are doing fairly well. However, constant training and education about these projects is still a challenge. Along with dependency management we also need rich metadata that is paired with distributed binaries and containers.
+
+\item \textbf{Community Standards}: Have one or more representatives join the OCI community, along with other standards bodies that work on ideas relevant to our communities.
+
+\item \textbf{Continuous Integration}: Can there be a CI resource or service provided that can better mock HPC environments? Can there be a standard CI service?
+
+% standardizing runner configuration/tagging is a thing we should talk about here. If different
+% sites deploy gitlab and hae different tags for runners, then CI is not portable and you can't run
+% the same tests or repo CI configuration at different sites. Need standard arch labels and such.
+% Flux resource langauge is an interesting start for this but there need to be mini-languages like
+% archspec for microarchitecture, smoething for GPU (hopefully also archspec), something for ABI
+% specs. That gets complicated, but it is needed to build proper test matrices.
+
+\item \textbf{Continuous Deployment}: Why can't traditional tools to produce software be hooked up with the CI service?
+
+% They can. Internal registries are needed, also OCI container launch needs to be scalable so that
+% we can use regular old registries. I linked you an ISCP proposal about making Podman and OCI
+% images scalable -- check that out in Slack.
+
+\item \textbf{Monitoring}: better integration of traditional workflow/job management tools with monitoring, and establishing best practices.
+\end{itemize}
