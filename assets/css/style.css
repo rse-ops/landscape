@@ -6,6 +6,10 @@ html {
   overflow-y: scroll;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 body {
   font-family: Helvetica, Arial, Verdana;
   background: #F7F7F7;
@@ -186,4 +190,61 @@ body {
   visibility: hidden;
   width: 0;
   height: 0;
+}
+
+/* Tabs for content */
+
+/* tabs */
+.tabs {
+  border-right: 1px solid #ccc;
+}
+.tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tabs input[type=radio] {
+  display: none;
+}
+.tabs label {
+  display: block;
+  float: left;
+  width: 33.33333%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-right: none;
+  background-color: #f7f7f7;
+  text-align: center;
+  font-weight: 700;
+  color: coral;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+.tabs label:hover {
+  background-color: white;
+}
+.tabs [id^=tab]:checked + label {
+  border-bottom-color: white;
+  background: white;
+  color: #333;
+}
+
+.tab-content {
+  display: none;
+  float: left;
+  width: 100%;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: white;
+}
+
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3 {
+  display: block;
+}
+
+.other-content {
+  color: white;
 }
