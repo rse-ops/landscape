@@ -408,7 +408,7 @@ h1, h2 {
 .tabs label {
   display: block;
   float: left;
-  width: 33.33333%;
+  width: 25%;
   padding: 1em;
   border: 1px solid #ccc;
   border-right: none;
@@ -443,10 +443,50 @@ h1, h2 {
 
 #tab1:checked ~ #tab-content1,
 #tab2:checked ~ #tab-content2,
-#tab3:checked ~ #tab-content3 {
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4 {
   display: block;
 }
 
 .other-content {
   color: white;
+}
+
+/* Simple table style */
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
 }
