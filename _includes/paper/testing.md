@@ -7,11 +7,11 @@ testing of scientific software.
 
 There is a huge divide between testing scientific software and using it
 on the shared resource. The reproducibility crisis that grew in the
-early 2010s [@replication-crisis] did advocate for more use of version
-control [@github; @gitlab] for research software collaboration and
+early 2010s {% cite replication-crisis %} did advocate for more use of version
+control {% cite github; @gitlab %} for research software collaboration and
 development, and the ease of integration of continuous integration (CI)
 external services for automated testing and deployment
-[@travis; @circle; @jenkins] made it more common for researchers to test
+{% cite travis; @circle; @jenkins %} made it more common for researchers to test
 and deploy their scientific software. It became more common practice to
 create releases alongside code, distribute them via packages managers,
 and even to provide containers that could be pulled and used on a
@@ -38,8 +38,8 @@ containers for quick usability. Arguably, what HPC centers might be able
 to bring to testing is scale. As tests need to be run frequently and
 across many different architectures, the incentive structure is arguably
 not there to maintain such a testing framework. Testing tools such as
-[Pavilion2](https://github.com/hpc/pavilion2) and
-[ReFrame](https://github.com/eth-cscs/reframe) are intended for facility
+{% cite Pavilion2 %}(https://github.com/hpc/pavilion2) and
+{% cite ReFrame %}(https://github.com/eth-cscs/reframe) are intended for facility
 testing, but there is no convergence on any kind of standard. Perhaps
 there should be, and this is something that should be discussed by the
 HPC community. The need seems to be there, as academic centers and
@@ -52,11 +52,11 @@ practice.
 ### Testing of Resources
 
 Most centers do some kind of kernel and application bench-marking
-[@measuring-hpc], along with testing of resources. For example, system
+{% cite measuring-hpc %}, along with testing of resources. For example, system
 administrators might use regression testing, including testing file
 permissions and mounts, communication between nodes and compatibility
 with the resource. For these regression tests, tools like Pavilion,
-[NHC](https://github.com/mej/nhc) and Interstate are popular.
+{% cite NHC %}(https://github.com/mej/nhc) and Interstate are popular.
 
 Another continuous integration strategy is to focus on regression
 testing via tools like ReFrame. Tools of this type try to test HPC
@@ -66,3 +66,5 @@ and Pavilion are designed to test the machine, and not the software.
 Ideally we would have a standard application testing tool. Likely better
 ability to do testing will come from improved integration of Continuous
 Integration (CI) services, discussed later in this paper.
+<br><br>
+{% bibliography --cited %}

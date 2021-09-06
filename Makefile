@@ -1,7 +1,8 @@
-.PHONY: all build
+.PHONY: all build run
+PROJECT_ROOT = $(shell pwd)
 
 all: build
-	docker run -it -v $PWD:/code  latex2md
+	docker run -it -v ${PROJECT_ROOT}:/code latex2md
 
 build:
 	docker build -t latex2md .

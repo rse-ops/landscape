@@ -8,6 +8,8 @@ organization. In both spaces, administrators of resources typically
 choose strategies to monitor their systems. In cloud development,
 monitoring services might be more easily integrated into different
 services, and in HPC some more traditionally DevOps tools like
-Kubernetes, Grafana, and Prometheus are starting to be used [@k8].
+Kubernetes, Grafana, and Prometheus are starting to be used {% cite k8 %}.
 However, best practices for monitoring have not been established, nor
 have best practices for running workflows and storing provenance.
+<br><br>
+{% bibliography --cited %}

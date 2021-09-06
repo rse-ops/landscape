@@ -26,3 +26,5 @@ or scientific libraries, but all of the testing, infrastructure, and
 support tools around them. We are making an effort to map out this
 space, which can be viewed at <https://vsoch.github.io/rse-ops/>. We are
 also clearly noting that RSE-ops extends beyond HPC (but includes it).
+<br><br>
+{% bibliography --cited %}

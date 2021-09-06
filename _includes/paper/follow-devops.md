@@ -70,3 +70,5 @@ link a traditional HPC single sign on (SSO) scheme (e.g., LDAP or
 Kerberos) to a version control service (e.g., GitLab or GitHub) to allow
 for role based access, but it's not clear how often this is done or if
 it's a good direction.
+<br><br>
+{% bibliography --cited %}

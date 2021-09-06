@@ -21,7 +21,7 @@ are on HPC or a cloud resource, should be able to get the best matching
 one. The container already exists, so we could imagine some hook before
 the pull looking at metadata on the host, and then sending it with a
 request for a specific container. This idea is similar to one discussed
-in [@Younge2019-uk]. In terms of metadata we would likely need:
+in {% cite Younge2019-uk %}. In terms of metadata we would likely need:
 
 -   Image architecture (to match to host) or best available for host per
     archspec
@@ -29,7 +29,7 @@ in [@Younge2019-uk]. In terms of metadata we would likely need:
 -   Hardware (and namely software compatibility with it)
 
 -   Memory / resource needs (perhaps we can be more specific here) (an
-    [example](https://github.com/spack/spack/blob/develop/share/spack/gitlab/cloud_pipelines/stacks/e4s/spack.yaml#L347-L364)
+    {% cite example %}(https://github.com/spack/spack/blob/develop/share/spack/gitlab/cloud_pipelines/stacks/e4s/spack.yaml#L347-L364)
     that requires \"big\" nodes)
 
 -   Software-level compatibility information (e.g., target CUDA driver
@@ -109,3 +109,5 @@ need:
 -   Hardware (e.g., ABI)
 
 -   Memory / resource needs
+<br><br>
+{% bibliography --cited %}

@@ -6,12 +6,12 @@ established around open source and standards.
 
 Specifically, the primary unit of operation, for DevOps, the container,
 has had extensive collaborative work in a community and governance
-structure called the Open Container Initiative (OCI) [@oci]. The history
+structure called the Open Container Initiative (OCI) {% cite oci %}. The history
 behind OCI reflects an organic, open source and community effort growing
 to meet the needs of a changing industry landscape. Specifically, Docker
-[@docker], by way of being the first prominent, commercial container
+{% cite docker %}, by way of being the first prominent, commercial container
 technology and having developed its own container registry, Docker Hub
-[@docker-hub], was an early contributor to these standards. An early
+{% cite docker-hub %}, was an early contributor to these standards. An early
 version of their RESTful API to interact with container manifests and
 layers to push or pull containers was adopted into the first
 distribution spec of OCI, along with an image, runtime, and digest
@@ -38,11 +38,13 @@ standards so that the needs of this different environment are
 represented in the community, and an equivalent step would be to better
 collaborate on software projects, training, and best practices. While
 collaboration does not always lead to the best outcome
-[@Wikipedia_contributors2021-wi], arguably it is inherit in software
-development [@Whitehead2010-zg] and we have a lot to gain to work harder
+{% cite Wikipedia_contributors2021-wi %}, arguably it is inherit in software
+development {% cite Whitehead2010-zg %} and we have a lot to gain to work harder
 at doing it well.
 
 This might be more challenging than it seems at face value, because not
 every organization has spare developers or staff to devote to this
 responsibility. Discussing and maintaining standards can also be
 tireless, hard work.
+<br><br>
+{% bibliography --cited %}

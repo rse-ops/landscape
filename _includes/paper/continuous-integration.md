@@ -2,7 +2,7 @@
 
 Continuous integration is an established practice of continually testing
 and building before deployment. It typically is focused around a version
-controlled code-base (e.g., GitHub or GitLab [@github; @gitlab]) and
+controlled code-base (e.g., GitHub or GitLab {% cite github; @gitlab %}) and
 developers collaborate to review code, ensure that tests pass, and then
 merge into a main branch. The goals are generally to ensure that when a
 piece or software or service hits a production resource, there will be
@@ -36,10 +36,12 @@ still develop using these systems, but then are not able to test on all
 the systems that might be needed. The challenge is thus getting any kind
 of modern web-based interface linked up directly to a cluster to run
 tests. Work at national labs using GitLab
-[@Mendoza_undated-lz; @noauthor_undated-fv], and specifically having a
+{% cite Mendoza_undated-lz; @noauthor_undated-fv %}, and specifically having a
 locally deployed Gitlab server with custom runners on various resources
-[@noauthor_undated-jd] has been a way to unite these two worlds.
+{% cite noauthor_undated-jd %} has been a way to unite these two worlds.
 Managing such an integration requires thinking about how to manage
 resources, user accounts, time allocations, and machine access. Another
 challenge is that there is is no standard workflow language for CI, and
 perhaps there should be.
+<br><br>
+{% bibliography --cited %}

@@ -46,3 +46,5 @@ opportunity to build or seek out tools to fill the space.
 
 -   **Monitoring**: better integration of traditional workflow/job
     management tools with monitoring, and establishing best practices.
+<br><br>
+{% bibliography --cited %}

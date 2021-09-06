@@ -14,7 +14,7 @@ available to users, and app developers that maintain their own
 deployments have to develop within that. At best, you can create modular
 structure and exposure of different software via file-system
 organization (e.g., putting apps in '/project') and using environment
-modules [@LMOD; @environment-modules; @shpc] (e.g., 'module load' only
+modules {% cite LMOD; @environment-modules; @shpc %} (e.g., 'module load' only
 what you need).
 
 Users are somewhat empowered to install their own software, given that
@@ -29,3 +29,5 @@ Ideally, every module and package would have a suite of tests to ensure
 its functionality, but in real world scenarios its likely that the
 software is tested elsewhere (e.g., a CI service associated with the
 source code) and distributed to the system for immediate usage.
+<br><br>
+{% bibliography --cited %}

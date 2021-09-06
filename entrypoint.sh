@@ -4,6 +4,7 @@ cd src
 for include in $(cat ../includes.txt); do
     printf "Parsing $include\n"
     pandoc -s $include.tex -o ../_includes/paper/$include.md # --bibliography rseops.bib 
+    python ../update-citations.py ../_includes/paper/$include.md
 done
 
 # Also render the updated PDF

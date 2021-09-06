@@ -5,7 +5,7 @@ series of questions about people, goals, and practices, and make a
 direct comparison to DevOps. On a high level, RSE-ops has a stronger
 association with HPC, while DevOps has a stronger association with the
 cloud, but the lines are blurry. While early efforts of some of these
-clouds attempted to re-brand HPC [@google-hpc], progress has been made
+clouds attempted to re-brand HPC {% cite google-hpc %}, progress has been made
 to the point that the gap between cloud and HPC is narrowing, and HPC
 centers are able to take advantage of cloud technologies, and vice
 versa. There are still subtle differences, and ideally there could be
@@ -38,12 +38,12 @@ institutions, national labs, and some private industry, or anywhere that
 high performance computing is the primary means of compute. While some
 companies might also use high performance computing, typically we likely
 find that larger companies maintain their own internal container
-orchestration system (e.g., Google uses Borg [@borg], and smaller
+orchestration system (e.g., Google uses Borg {% cite borg %}, and smaller
 companies pay to use cloud services that offer a similar set of tooling.
 Likely this decision results from some cost-benefit analysis
-[@Prabhakaran2018-sn] that determines that one is more cost effective
-than the other. Whether we look at Google Cloud [@google-devops],
-Microsoft Azure [@microsoft-devops] or Amazon Web Services [@aws], all
+{% cite Prabhakaran2018-sn %} that determines that one is more cost effective
+than the other. Whether we look at Google Cloud {% cite google-devops %},
+Microsoft Azure {% cite microsoft-devops %} or Amazon Web Services {% cite aws %}, all
 of these cloud environments have a primary focus on distributed, scaled,
 and \"server-less\" technologies. We might call this [cloud
 computing](https://en.wikipedia.org/wiki/Cloud_native_computing).
@@ -61,7 +61,9 @@ case that a DevOps team or team of Support Reliability Engineers (SREs)
 is tasked with managing software and services for the company. The SREs
 are primarily concerned with how things should be done, and developing
 monitoring and other support tools, while a DevOps teams is primarily
-concerned with doing it [@google-sre]. The line gets blurry with respect
+concerned with doing it {% cite google-sre %}. The line gets blurry with respect
 to titles, because a company can have some flexibility with respect to
 naming these roles. However, it's common to see titles like Software
 Engineer, DevOps Engineer, SRE, or even Cloud Architect.
+<br><br>
+{% bibliography --cited %}

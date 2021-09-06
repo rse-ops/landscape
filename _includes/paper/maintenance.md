@@ -17,18 +17,18 @@ of the system. The resources are available and can be requested. Thus,
 the stark difference is that organizations with HPC typically host them
 on-premise, meaning that the organization needs to pay for everything
 from people to maintain and operate to the energy and cooling of the
-systems [@Carlyle2010-ga]. On the other hand, although operational costs
+systems {% cite Carlyle2010-ga %}. On the other hand, although operational costs
 might be reduced using a cloud resource, that cost can explode quickly
 depending on the kind and scale of cloud resource that is needed (e.g.,
-GPUs) [@Li2020-lm]. There is much knowledge in the HPC community about
+GPUs) {% cite Li2020-lm %}. There is much knowledge in the HPC community about
 hidden costs from the cloud, and doing comparisons between cloud and
 on-premise to find that on-premise can be half the costs
-[@Morgan2021-em; @nersc-cloud-study]. One of the challenges is that the
+{% cite Morgan2021-em; @nersc-cloud-study %}. One of the challenges is that the
 costs are constantly changing. Despite wanting to ultimately maximize
 profits, cloud providers typically provide cost calculators to help with
 this, provide free-tiers and \"spot instances\" at a lower cost, high
 use discounts, and do not charge for services (e.g., instances) that are
-turned off [@Power2018-ru].
+turned off {% cite Power2018-ru %}.
 
 While we cannot suggest universal best practices for maintenance, it is
 logical that each institution needing resources do a cost benefit
@@ -37,3 +37,5 @@ might be more logical for small organizations (that perhaps cannot
 afford hosting and maintaining their own) to use cloud resources, and
 for larger organizations that are constantly using resources to host
 their own to save money.
+<br><br>
+{% bibliography --cited %}

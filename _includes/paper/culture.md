@@ -55,3 +55,5 @@ services, we could then try to map that to HPC. We ultimately want a
 layout of the land for what constitutes the \"infrastructure\" of HPC
 and what is missing or could be improved. Each node in this map would
 then be linked to documentation in a consistent, well-branded way.
+<br><br>
+{% bibliography --cited %}

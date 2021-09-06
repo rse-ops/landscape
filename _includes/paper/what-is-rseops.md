@@ -1,5 +1,3 @@
-## What is RSE-ops?
-
 The role of Research Software Engineer (RSE) has been emerging in the
 last decade, and due to the hybrid nature of working environments across
 cloud, and HPC, DevOps practices are logically being adopted. So if
@@ -11,7 +9,7 @@ forefront?
 Inspired by DevOps, we can define a similar term for the Research
 Software Engineering community to also inspire collaboration and
 champion best practices -- RSE-ops. Research Software Engineers (RSEs)
-[@rse-history] are those individuals that write code for scientific
+{% cite rse-history %} are those individuals that write code for scientific
 software, and more generally support researchers to use codes on high
 performance computing systems, cloud services, and lab computers. Akin
 to traditional Software Engineers at major tech companies, they are
@@ -38,3 +36,5 @@ web-based and extend beyond HPC, and so it is important to consider this
 set as part of the larger scientific or research software engineering
 universe. However, the dual need to run or deploy application across
 environments presents greater challenges for the community.
+<br><br>
+{% bibliography --cited %}

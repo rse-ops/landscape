@@ -21,6 +21,12 @@ To learn more about RSE-ops, we invite you to visit the [landscape](https://vsoc
 
 ## Quick Start
 
+Build the container, if needed.
+
+```bash
+$ make build
+```
+
 Update the landscape after making changes to the tex files in [src](src) (requires docker)
 
 ```bash
@@ -37,7 +43,7 @@ Open to [http://localhost:4000/rse-ops/](http://localhost:4000/rse-ops/)
 
 ## How does it work?
 
-The site here renders from Latex, which we convert to markdown. This will happen
+The site here renders from LaTex, which we convert to markdown. This will happen
 in continuous integration, but you can also do it locally! E.g., you might first want
 to make changes to LaTeX files in the [src](src) folder, and then build a container
 to compile the PDF:
@@ -51,6 +57,18 @@ And then enter the container, binding the present working directory with code:
 ```bash
 $ docker run -it -v $PWD:/code --entrypoint bash latex2md
 ```
+
+These commands are represented with `make build` and `make` shown earlier. The
+commands above will do the following:
+
+1. Take each file defined in [includes.txt](includes.txt) included in the [src](src) folder and render into [_includes/paper](_includes/paper)
+2. Update the newly generated markdown to be in a reference format that is rendered by [jekyll-scholar](https://github.com/inukshuk/jekyll-scholar/), including a bibliography.
+3. Also render a new PDF of the _entire_ document.
+
+The cool thing is that we are rendering content into a website (Jekyll) from LaTex, and
+that some content is also rendered into a traditional looking paper. Awesome! The first
+is more fun and readable, and the second is mostly expected for any kind of academic
+endeavour.
 
 ### 1. Build the Paper PDF
 

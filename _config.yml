@@ -34,6 +34,10 @@ collections:
   tools:
     output: true
     permalink: /:collection/:path/
+  paper-details:
+    output: true
+    permalink: /:collection/:path
+    collections_dir: paper-details
   
 # Defaults
 defaults:
@@ -55,3 +59,14 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      
+      
+scholar:
+  style: _bibliography/my-ieee.cls
+  bibliography: rseops.bib
+  bibliography_template: bibitem-template
+  details_dir: "paper-details"
+  details_layout: "details.html"
+#  details_permalink: "/notes-jekyll/:details_dir/:key:extension"
+# Ensure that details are not printed twice
+  details_link: ""
