@@ -28,6 +28,7 @@ jobs:
           printf "GitHub Actor: ${GITHUB_ACTOR}\n"
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
+          git config pull.rebase false
           git fetch || printf "fetch did not work\n"
           git checkout -b gh-pages || git checkout gh-pages
           git pull origin gh-pages
@@ -39,7 +40,7 @@ jobs:
               set -e
               printf "Changes\n"
               git commit -a -m "Automated push to update rse-ops site $(date '+%Y-%m-%d')" || exit 0
-              git push origin gh-pages
+              git push origin gh-pages --force
           else
               set -e
               printf "No changes\n"
