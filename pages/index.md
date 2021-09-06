@@ -32,7 +32,7 @@ To get started:
   <li>View current best practice <a href="{{ site.baseurl }}/projects">projects and tools</a></li>
   <li>A flat view of the site via the <a href="{{ site.baseurl }}/sitemap">sitemap</a> can be more easy to navigate.</li>
   <li>A <a href="{{ site.baseurl }}/src/rse-ops.pdf">rendered PDF</a> of all the content can be easier to take with you.</li>
-  <li>View our <a href="">discussion board</a> to see how you can help or give feedback!</li>
+  <li>View our <a href="https://github.com/rse-radiuss/rse-ops/discussions" target="_blank">discussion board</a> to see how you can help or give feedback!</li>
 </ul>
 
 </div>

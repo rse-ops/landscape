@@ -1,6 +1,6 @@
 # RSE-ops
 
-![assets/img/rse-ops.png](assets/img/rse-ops.png)
+![assets/img/rse-sun.png](assets/img/rse-sun.png)
 
 Welcome to the Research Software Engineering Operations (RSE-ops) repository! As you
 might guess, RSE-ops is a flavor of DevOps.  If DevOps is the intersection of 
