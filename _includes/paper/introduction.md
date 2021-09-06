@@ -1,5 +1,3 @@
-# Introduction
-
 Successful development, deployment, and maintenance of research software
 is central to scientific discovery. In the last decade, the role of
 Research Software Engineer (RSE) [@rse-history] has risen to awareness,
