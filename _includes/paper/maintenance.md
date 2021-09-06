@@ -4,7 +4,7 @@ RSE-ops on HPC means that a number of systems are running all the time.
 They require a team to monitor, maintain, and take care of them. Cloud
 development does not require the resource requester to think about
 maintenance of a system any longer than the resource is needed. The
-resources are truly \"on demand.\" An instance, or small container
+resources are truly "on demand." An instance, or small container
 cluster, might be requested when it's needed, and brought down and
 forgotten about when the work is done. This is a much easier interaction
 for the user, as they can request what they need when they need it. For
@@ -26,7 +26,7 @@ on-premise to find that on-premise can be half the costs
 {% cite Morgan2021-em; @nersc-cloud-study %}. One of the challenges is that the
 costs are constantly changing. Despite wanting to ultimately maximize
 profits, cloud providers typically provide cost calculators to help with
-this, provide free-tiers and \"spot instances\" at a lower cost, high
+this, provide free-tiers and "spot instances" at a lower cost, high
 use discounts, and do not charge for services (e.g., instances) that are
 turned off {% cite Power2018-ru %}.
 

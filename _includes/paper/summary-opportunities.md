@@ -11,12 +11,12 @@ opportunity to build or seek out tools to fill the space.
     without thinking about it.
 
 -   **On Demand Resources**: An HPC user should theoretically be able to
-    request a custom resource, and \"throw it away\" when done. For HPC
+    request a custom resource, and "throw it away" when done. For HPC
     an administrative team would still need to monitor and maintain the
     resources, but to the user there could be a more interactive,
-    customized experience. E.g., \"I want an instance with this amount
+    customized experience. E.g., "I want an instance with this amount
     of memory, storage, and with this software installed. And I want to
-    customize and request it in a web interface.\" While traditional
+    customize and request it in a web interface." While traditional
     batch systems can support this kind of request, what they aren't
     designed for is on-demand computing. Batch systems expect jobs that
     take a long time, and they aren't responsive.

@@ -7,19 +7,25 @@ import os
 import re
 import sys
 
+
 def main(input_file):
     if not os.path.exists(input_file):
         sys.exit("%s does not exist." % input_file)
-    with open(input_file, 'r') as fd:
+    with open(input_file, "r") as fd:
         content = fd.read()
     # Replace references
     for ref in re.findall("\[(.*?)\]", content):
         original = "[" + ref + "]"
         replacewith = "{% cite " + ref.lstrip("@") + " %}"
         content = content.replace(original, replacewith)
-    content = content + "<br><br>\n{% bibliography --cited %}"        
-    with open(input_file, 'w') as fd:
-       fd.write(content)
+
+    # Replace escaped quotes
+    content = content.replace('\\"', '"')
+
+    content = content + "<br><br>\n{% bibliography --cited %}"
+    with open(input_file, "w") as fd:
+        fd.write(content)
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

@@ -16,7 +16,7 @@
   Community Standards      Significant time and effort to establish standards for containers                              Traditionally not as involved in the same efforts
   Continuous Integration   Well established practices and integration of version control with build, test, deploy         Limited interaction with traditional CI services, local deployment and custom runners is promising
   Continuous Deployment    Comes down to pushing containers to registries for production systems                          No best practice established, but can interact with resources in some situations to deploy
-  Monitoring               Monitoring is well integrated into services                                                    Must \"roll your own\" monitoring, but DevOps services (e.g., Grafana, Prometheus) are used sometimes.
+  Monitoring               Monitoring is well integrated into services                                                    Must "roll your own" monitoring, but DevOps services (e.g., Grafana, Prometheus) are used sometimes.
   Security                 DevSecOps is leading the way to make security an automated part of the development lifecycle   Security is unlikely to be automated, and a greater challenge with many users sharing the same space.
 :::
 <br><br>

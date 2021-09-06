@@ -4,7 +4,7 @@ is a term that refers to best practices to bridge development and
 operations. It was coined in 2008 {% cite devops-paper %}, and has grown out of
 a web services oriented model. The term has expanded to refer to other
 subsets of expertise in this area such as cloud security operations,
-which is called \"DevSecOps,\" adding the \"Sec\" for \"Security.\" In
+which is called "DevSecOps," adding the "Sec" for "Security." In
 DevOps, best practices are generally defined around:
 
 1.  continuous integration: automated integration of code changes into a
@@ -18,7 +18,7 @@ DevOps, best practices are generally defined around:
 4.  communication and collaboration: interaction between team members
     and optimally working together
 
-5.  \"infrastructure as code\": provisioning resources through simple
+5.  "infrastructure as code": provisioning resources through simple
     text files
 
 6.  using micro-services: single function modules that can be assembled
@@ -46,10 +46,10 @@ Foundation (CNCF), which was founded in 2015
 {% cite Wikipedia_contributors2021-jt %}. Specifically, the primary stated
 reason for foundation of CNCF was to foster community and support around
 container technologies, which often are the core unit of automation and
-DevOps practices {% cite Nishanil_undated-fk %}). A new term, \"cloud-native\"
+DevOps practices {% cite Nishanil_undated-fk %}). A new term, "cloud-native"
 was coined with this title, which is heavily reliant on DevOps. DevOps
 practices are considered the fundamental base of taking on a
-cloud-native approach, and another term, \"Cloud Native DevOps\"
+cloud-native approach, and another term, "Cloud Native DevOps"
 {% cite cloud-native-devops-oreilly %} was even coined to specifically refer to
 the application of DevOps practices to the cloud. Since the two are so
 inexplicably intertwined, for the remainder of this paper, we will refer

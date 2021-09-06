@@ -35,8 +35,8 @@ problem isn't new, and in fact we can look to cloud computing for
 inspiration. Although cloud computing goes back to the 1960s
 {% cite Foote2017-fi %} and the term wasn't coined until 1996 {% cite Scality2020-of %},
 what we are specifically interested in is DevOps -- a movement that
-sought to bring together development of software and services (\"Dev\")
-with their deployment (operations, or \"Ops\") starting around 2007
+sought to bring together development of software and services ("Dev")
+with their deployment (operations, or "Ops") starting around 2007
 {% cite Atlassian_undated-ka %}. Interesting, Research Software Engineering is
 going through the same challenges, and would benefit from the same kind
 of movement.

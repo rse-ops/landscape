@@ -45,7 +45,7 @@ Likely this decision results from some cost-benefit analysis
 than the other. Whether we look at Google Cloud {% cite google-devops %},
 Microsoft Azure {% cite microsoft-devops %} or Amazon Web Services {% cite aws %}, all
 of these cloud environments have a primary focus on distributed, scaled,
-and \"server-less\" technologies. We might call this [cloud
+and "server-less" technologies. We might call this [cloud
 computing](https://en.wikipedia.org/wiki/Cloud_native_computing).
 
 When we look closely at individuals involved, it tends to be the case

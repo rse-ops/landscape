@@ -30,7 +30,7 @@ in {% cite Younge2019-uk %}. In terms of metadata we would likely need:
 
 -   Memory / resource needs (perhaps we can be more specific here) (an
     {% cite example %}(https://github.com/spack/spack/blob/develop/share/spack/gitlab/cloud_pipelines/stacks/e4s/spack.yaml#L347-L364)
-    that requires \"big\" nodes)
+    that requires "big" nodes)
 
 -   Software-level compatibility information (e.g., target CUDA driver
     version, MPI variant and version)
@@ -92,7 +92,7 @@ case would likely need:
 
 For a limited scope of containers, such as those designed completely
 from a package manager, some of this metadata could be included
-automatically. However, most containers \"in the wild\" won't have been
+automatically. However, most containers "in the wild" won't have been
 developed from a single package manager, and there should still be a way
 to discover these metrics.
 

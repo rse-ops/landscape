@@ -12,7 +12,7 @@ that are accessible via a web interface (e.g., OnDemand from the Ohio
 Supercomputing Center {% cite ondemand %} or JupyterHub {% cite juypterhub %} for
 several national labs and academic institutions), typically, opening up
 resources to a web interface is not a well developed area. Some might
-argue it's an issue of not wanting to take risk of \"opening up\"
+argue it's an issue of not wanting to take risk of "opening up"
 clusters to a web interface, but realistically it could be called a
 skill gap. Web technologies were greatly developed and adopted in the
 more commercial world, and already overworked system admins don't have

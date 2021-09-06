@@ -11,7 +11,7 @@ networking, or further customizing a system provided resource. These
 points are related to the permissions section.
 
 Within DevOps, a community has formed around best practices for security
-called \"DevSecOps\" {% cite noauthor_undated-yd %}. Although there is more
+called "DevSecOps" {% cite noauthor_undated-yd %}. Although there is more
 freedom in the cloud, multi-tenant projects still require that different
 teams maintain unique namespaces, and that services are deployed to
 avoid any kind of security breach or intellectual property violation.

@@ -12,7 +12,7 @@ mean that there is a trad-eoff between portability and performance
 {% cite Younge2019-uk %}. Even if a container does run, it could be that there
 are huge losses in performance.
 
-The current \"best practices\" for this issue are generally to try
+The current "best practices" for this issue are generally to try
 binding libraries from the host into the container, or to add needed
 libraries from the host to the "LD_LIBRARY_PATH" {% cite Younge2019-uk %}. A
 better future, however, could go in one of two directions. A more

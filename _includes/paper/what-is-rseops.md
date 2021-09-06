@@ -1,7 +1,7 @@
 The role of Research Software Engineer (RSE) has been emerging in the
 last decade, and due to the hybrid nature of working environments across
 cloud, and HPC, DevOps practices are logically being adopted. So if
-DevOps is the intersection of \"Developer\" and \"Operations,\" then how
+DevOps is the intersection of "Developer" and "Operations," then how
 does this concept map to this new space, where high performance
 computing, or more generally, Research Software Engineering is at the
 forefront?
@@ -15,9 +15,9 @@ performance computing systems, cloud services, and lab computers. Akin
 to traditional Software Engineers at major tech companies, they are
 responsible not just for software development, but also for deployment
 of analysis pipelines and general services. It can be noted that we are
-not calling the new term RseDevOps (dropping \"Dev\"), and this is done
-intentionally as the term \"Research Software Engineering\" encompasses
-this \"Development\" portion. RSE-ops, then, appropriately refers to
+not calling the new term RseDevOps (dropping "Dev"), and this is done
+intentionally as the term "Research Software Engineering" encompasses
+this "Development" portion. RSE-ops, then, appropriately refers to
 best practices for ensuring the same reliability, scale, collaboration,
 and software engineering for research codes. We may not always be
 running a scaled web service, but we might be running scaled jobs on a

@@ -7,7 +7,7 @@ the system, as opposed to a containerized environment, which is arguably
 a foundation of modern DevOps {% cite containers-intro %}. However, studies are
 increasingly showing that containerization overhead is in fact low
 {% cite Torrez2019-ho %}, and so the main distinguishing difference between
-using containers (\"DevOps\") and native install (traditional HPC) is
+using containers ("DevOps") and native install (traditional HPC) is
 ultimately the portability of the software, and that HPC software must
 be built across a wide set of architectures. RSE-ops is an interesting
 combination of these two realities, as containers are widely used on HPC
@@ -15,8 +15,8 @@ combination of these two realities, as containers are widely used on HPC
 having complex software stacks alongside one another without conflicting
 dependencies. This means that modules are common
 {% cite LMOD; @environment-modules %}, and even modules paired with containers
-{% cite shpc %} and users are encouraged to \"BYOE\" or \"bring your own
-environment\" through containerization and local install in the case
+{% cite shpc %} and users are encouraged to "BYOE" or "bring your own
+environment" through containerization and local install in the case
 that the software can be installed in user space. Otherwise, the
 software must be requested to be installed by the administrators of the
 cluster.
