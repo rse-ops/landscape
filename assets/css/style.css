@@ -119,6 +119,8 @@ h1, h2 {
   font-size: 9px;
 }
 
+/* This is a card background for text */
+
 .card {
    padding: 25px;
    border-radius: 10px;
@@ -133,6 +135,180 @@ h1, h2 {
   top: -30px;
 }
 
+/* This is a category card */
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.6%;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+}
+.category-card a {
+  color: inherit;
+}
+.category-card a:hover {
+  color: #5ad67d;
+}
+.category-card:hover .photo {
+  transform: scale(1.3) rotate(3deg);
+}
+.category-card .meta {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+}
+.category-card .photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
+.category-card .details,
+.category-card .details ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.category-card .details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  margin: auto;
+  transition: left 0.2s;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.category-card .details a {
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+}
+.category-card .details ul li {
+  display: inline-block;
+}
+.category-card .details .author:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.category-card .details .date:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.category-card .details .tags ul:before {
+  font-family: FontAwesome;
+  content: "";
+  margin-right: 10px;
+}
+.category-card .details .tags li {
+  margin-right: 2px;
+}
+.category-card .details .tags li:first-child {
+  margin-left: -4px;
+}
+.category-card .description {
+  padding: 1rem;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.category-card .description h1,
+.category-card .description h2 {
+  font-family: Poppins, sans-serif;
+}
+.category-card .description h1 {
+  line-height: 1;
+  margin: 0;
+  font-size: 1.7rem;
+}
+.category-card .description h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  margin-top: 5px;
+}
+.category-card .description .read-more {
+  text-align: right;
+}
+.category-card .description .read-more a {
+  color: #5ad67d;
+  display: inline-block;
+  position: relative;
+}
+.category-card .description .read-more a:hover:after {
+  margin-left: 5px;
+  opacity: 1;
+}
+.category-card p {
+  position: relative;
+  margin: 1rem 0 0;
+}
+.category-card p:first-of-type {
+  margin-top: 1.25rem;
+}
+.category-card p:first-of-type:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background: #5ad67d;
+  width: 35px;
+  top: -0.75rem;
+  border-radius: 3px;
+}
+.category-card:hover .details {
+  left: 0%;
+}
+@media (min-width: 640px) {
+  .category-card {
+    flex-direction: row;
+    max-width: 700px;
+  }
+  .category-card .meta {
+    flex-basis: 40%;
+    height: auto;
+  }
+  .category-card .description {
+    flex-basis: 60%;
+  }
+  .category-card .description:before {
+    transform: skewX(-3deg);
+    content: "";
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .category-card.alt {
+    flex-direction: row-reverse;
+  }
+  .category-card.alt .description:before {
+    left: inherit;
+    right: -10px;
+    transform: skew(3deg);
+  }
+  .category-card.alt .details {
+    padding-left: 25px;
+  }
+}
 
 /* #Tablet (Portrait) */
 

@@ -14,14 +14,14 @@ permalink: /about
   <input type="radio" name="tabs" id="tab3"><label for="tab3">What is RSE-ops?</label>
 
   <div id="tab-content1" class="tab-content">
-  {% include paper/introduction.md %}
+  {% include paper/introduction.html %}
   </div>
 
   <div id="tab-content2" class="tab-content">
-  {% include paper/what-is-devops.md %}
+  {% include paper/what-is-devops.html %}
   </div>
 
   <div id="tab-content3" class="tab-content">
-  {% include paper/what-is-rseops.md %}
+  {% include paper/what-is-rseops.html %}
   </div>
 </div>
