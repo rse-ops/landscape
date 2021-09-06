@@ -4,19 +4,19 @@ Installation of scientific software on HPC is a non-trivial task. To
 maximize the efficiency of any piece of software and maximally utilize
 an underlying resource, it's typically ideal to install it natively on
 the system, as opposed to a containerized environment, which is arguably
-a foundation of modern DevOps [@containers-intro]. However, studies are
+a foundation of modern DevOps {% cite containers-intro %}. However, studies are
 increasingly showing that containerization overhead is in fact low
-[@Torrez2019-ho], and so the main distinguishing difference between
-using containers (\"DevOps\") and native install (traditional HPC) is
+{% cite Torrez2019-ho %}, and so the main distinguishing difference between
+using containers ("DevOps") and native install (traditional HPC) is
 ultimately the portability of the software, and that HPC software must
 be built across a wide set of architectures. RSE-ops is an interesting
 combination of these two realities, as containers are widely used on HPC
-[@singularity; @charlie; @podman] but the environments must also support
+{% cite singularity; @charlie; @podman %} but the environments must also support
 having complex software stacks alongside one another without conflicting
 dependencies. This means that modules are common
-[@LMOD; @environment-modules], and even modules paired with containers
-[@shpc] and users are encouraged to \"BYOE\" or \"bring your own
-environment\" through containerization and local install in the case
+{% cite LMOD; @environment-modules %}, and even modules paired with containers
+{% cite shpc %} and users are encouraged to "BYOE" or "bring your own
+environment" through containerization and local install in the case
 that the software can be installed in user space. Otherwise, the
 software must be requested to be installed by the administrators of the
 cluster.
@@ -62,16 +62,18 @@ scientific software on HPC is what we would define as RSE-ops.
 Given the current ecosystem where RSEops best practices are not known,
 we can make suggestions that best handle this dual need for modularity
 or containers and native installations. For installing scientific
-software, the package managers [spack](https://github.com/spack/spack)
+software, the package managers {% cite spack %}(https://github.com/spack/spack)
 and software build and installation framework
-[easybuild](https://docs.easybuild.io/en/latest/Introduction.html) or
+{% cite easybuild %}(https://docs.easybuild.io/en/latest/Introduction.html) or
 module managers LMOD and environment modules
-[@LMOD; @environment-modules] are most commonly used to install and
+{% cite LMOD; @environment-modules %} are most commonly used to install and
 manage scientific software. Container technologies are also used to
 allow researchers to use containerization
-[@charlie; @podman; @singularity; @shifter]. Many of these tools allow
+{% cite charlie; @podman; @singularity; @shifter %}. Many of these tools allow
 flexibility to transition between tools, such as spack producing files
 to build containers, and containers installing software from spack
-[@autamus]. Package managers are a strong collaborative framework
+{% cite autamus %}. Package managers are a strong collaborative framework
 because they provide a structured way for people to work together on
 software together.
+<br><br>
+{% bibliography --cited %}

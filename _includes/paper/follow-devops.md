@@ -5,7 +5,7 @@ DevOps was HPC system complexity, and inability to change quickly.
 However, clouds now are also increasing in complexity, not just in
 services offered, but machines (and general details) relevant to each
 service. A second factor is availability of resources. On HPC,
-\"on-demand\" usually means waiting in a queue for your turn. This means
+"on-demand" usually means waiting in a queue for your turn. This means
 that software development on HPC is a slow task, and typically the
 software is not developed alongside the system, but perhaps only used or
 tested there after the fact.
@@ -24,7 +24,7 @@ important factors when figuring out compatibility.
 
 There is also little concern with using updated systems or software --
 unlike HPC that needs to always support legacy systems, deployment on
-the cloud is more \"use and throw away\" to easily support whatever
+the cloud is more "use and throw away" to easily support whatever
 system is desired. As long as services are written in portable languages
 and don't require high performance with respect to node configuration,
 they can be run anywhere, and people are agnostic to the details.
@@ -70,3 +70,5 @@ link a traditional HPC single sign on (SSO) scheme (e.g., LDAP or
 Kerberos) to a version control service (e.g., GitLab or GitHub) to allow
 for role based access, but it's not clear how often this is done or if
 it's a good direction.
+<br><br>
+{% bibliography --cited %}

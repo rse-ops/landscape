@@ -1,7 +1,7 @@
 # A Harder Challenge is Changing Culture
 
 If DevOps is a culture and community that emphasizes collaboration
-between \"operations\" and \"development,\" would RSE-ops be the same
+between "operations" and "development," would RSE-ops be the same
 idea but focusing on the collaboration between HPC system
 administrators, and research software engineers? And instead of
 automating services, would we want to automate scientific workflows,
@@ -17,10 +17,10 @@ consistency (arguably the opposite of change) is already part of the
 culture. A strategy to go about inspiring change might be to start with
 a current practice, and ask the questions:
 
--   \"How do we automate this?\"
+-   "How do we automate this?"
 
--   \"How do teams X and Y work together, what are the common goals and
-    units of operation?\"
+-   "How do teams X and Y work together, what are the common goals and
+    units of operation?"
 
 A lot of RSE-ops seems to come down to automation, which is why it's a
 good question to start with. Another good suggestion is to consider
@@ -52,6 +52,8 @@ how it could be more collaborative or automated.
 Another interesting question is how could this stack span HPC and cloud?
 How can we find some convergence? If we can create a map of cloud
 services, we could then try to map that to HPC. We ultimately want a
-layout of the land for what constitutes the \"infrastructure\" of HPC
+layout of the land for what constitutes the "infrastructure" of HPC
 and what is missing or could be improved. Each node in this map would
 then be linked to documentation in a consistent, well-branded way.
+<br><br>
+{% bibliography --cited %}

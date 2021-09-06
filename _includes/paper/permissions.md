@@ -12,14 +12,16 @@ be worked around.
 
 This isn't to say that root should be always required, or that allowing
 the user to have it is best practice. Container technologies are
-increasingly going \"rootless,\" meaning they can operate fairly
-successfully in user space [@charlie; @podman; @Priedhorsky2021-xx].
+increasingly going "rootless," meaning they can operate fairly
+successfully in user space {% cite charlie; @podman; @Priedhorsky2021-xx %}.
 Arguably, if the HPC community had been more involved with the Open
-Container Initiative (OCI) earlier, \"rootless\" containers would have
+Container Initiative (OCI) earlier, "rootless" containers would have
 been a prominent point earlier and we'd be farther along now. There is
-clearly no \"fix\" to give a user extended permissions, but rather
+clearly no "fix" to give a user extended permissions, but rather
 software that can empower them to deploy their user stacks without
 asking for permission. Along with rootless container technologies,
-package managers like [pip](https://pypi.org/project/pip/) or
-[conda](https://docs.conda.io/en/latest/) can make it easy to install
+package managers like {% cite pip %}(https://pypi.org/project/pip/) or
+{% cite conda %}(https://docs.conda.io/en/latest/) can make it easy to install
 software in user space.
+<br><br>
+{% bibliography --cited %}

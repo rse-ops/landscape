@@ -10,6 +10,10 @@ a {
   text-decoration: none !important;
 }
 
+a:visited {
+  color: darkblue;
+}
+
 body {
   font-family: Helvetica, Arial, Verdana;
   background: lightskyblue;
@@ -250,12 +254,15 @@ h1, h2 {
 
 .tab-content {
   display: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   float: left;
   width: 100%;
   padding: 1em;
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
   background-color: white;
+  line-height: 26px;
 }
 
 #tab1:checked ~ #tab-content1,
