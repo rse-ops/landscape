@@ -30,6 +30,7 @@ jobs:
           git config user.email "github-actions@users.noreply.github.com"
           git fetch || printf "fetch did not work\n"
           git checkout -b gh-pages || git checkout gh-pages
+          git pull origin gh-pages
           git add src/
           git add _includes/paper
           set +e
