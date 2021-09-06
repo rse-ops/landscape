@@ -1,5 +1,3 @@
-\subsection{Portability for RSE-ops vs DevOps}
-
 In DevOps workflows, portability is achieved by way of using entirely isolated container environments. Although there still may be host or kernel dependencies, it's fairly trivial on the cloud to select a different architecture for this.
 Running on HPC, however, is much more complex, as there is typically more of a seamless environment with the host, or if not, the need to share libraries between the container and host. Technologies such as MPI and infiniband, and more generally, complex hardware and different kinds of performance optimization setups mean that there is a trad-eoff between portability and performance \cite{Younge2019-uk}. Even if a container does run, it could be that there are huge losses in performance. 
 

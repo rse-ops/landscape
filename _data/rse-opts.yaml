@@ -2,7 +2,11 @@
   description: Includes system administrators, research software engineers, and other staff that support a research ecosystem.  This does not include domain-specific software, is not limited to running on HPC, and it only includes open source.
   categories:
     - name: Containerization
+      description: Container technologies are usefor across all areas of Rse-ops, including distribution, testing, workflows, and supporting reproducibility.
       slug: containers
+      paper_sections: 
+       - containers
+       - portability
       entries:
         - name: Docker
           img: docker.png
@@ -16,7 +20,10 @@
           img: podman.png
 
     - name: Version Control
+      description: Version Control Systems (vcs) are a fundamental ingredient to working on and sharing source code.
       slug: vcs
+      paper_sections:
+        - scientific-software
       entries:
         - name: git
           img: git.png
@@ -26,7 +33,10 @@
           img: mercurial.png
 
     - name: Compilers
+      description: Compilers are the bread and butter of scientific software to turn human readable code into a machine-readable version.
       slug: compilers
+      paper_sections:
+        - scientific-software
       entries:
         - name: gcc
           img: gcc.svg
@@ -42,7 +52,10 @@
           img: mpicc.png
 
     - name: Programming Languages
+      description: Programming languages are another cornerstone of of RSE-ops and scientific software. As programmers, we love and need them.
       slug: languages
+      paper_sections:
+        - scientific-software
       entries:
         - name: Python
           img: python.png
@@ -54,7 +67,10 @@
           img: go.png
   
     - name: Database
+      description: Databases are a subset of scientific software that allow us to save and query larger amounts of data in a systematic way.
       slug: db
+      paper_sections:
+        - scientific-software
       entries:
         - name: MariaDB
           img: maria.png
@@ -78,7 +94,10 @@
           img: couch.png
 
     - name: Orchestration and Scheduling
+      description: Schedulers and orchestrator allow us to scale running workflows or analyses, regardless if we are on HPC or cloud.
       slug: scheduling
+      paper_sections:
+        - scaling
       entries:
         - name: SLURM
           img: slurm.png
@@ -90,7 +109,13 @@
           img: htcondor.png
     
     - name: Building, Packaging, Application Delivery
+      description: Package managers, or more generally, build tools and associated delivery mechanisms, are essential for building and getting software to where we need it.
       slug: builds
+      paper_sections: 
+       - continuous-deployment
+       - distribution
+       - dependencies
+       - distribution
       entries:
         - name: CMake
           img: cmake.png
@@ -106,7 +131,10 @@
           img: spack.svg
 
     - name: Streaming and Messaging
+      description: Streaming and Messaging tools are a common means in HPC to power large simulations and other analyses.
       slug: message
+      paper_sections:
+        - scaling
       entries:
         - name: Spark
           img: spark.png
@@ -116,7 +144,11 @@
           img: mvapich.png
         
     - name: Monitoring and Checkpointing
+      description: Monitoring is essential not just for keeping track of service status, but also for security and understanding of large resources.
       slug: monitor
+      paper_sections: 
+       - monitoring
+       - security
       entries:
         - name: dmtcp
           img: dmtcp.png
@@ -126,7 +158,10 @@
           img: grafana.png
 
     - name: Web Interfaces
+      description: Web interfaces open up portals to make interaction with scientific software and tools accessible and understandable.
       slug: web
+      paper_sections:
+        - accessibility
       entries:
         - name: Open OnDemand
           img: ondemand.jpg
@@ -134,7 +169,11 @@
           img: jupyter.png
 
     - name: Continuous Integration and Delivery
+      description: Continous Integration services allow us to continually build, test, and deploy our scientific software.
       slug: ci
+      paper_sections: 
+       - continuous-integration
+       - testing
       entries:
         - name: GitLab
           img: gitlab.png
@@ -144,6 +183,11 @@
           img: gha.png
         - name: Jenkins
           img: jenkins.png
+
+# TODO: community/standards
+# maintenance
+# permissions
+# standards
 
 # testing
 # scaling

@@ -7,17 +7,18 @@ might guess, RSE-ops is a flavor of DevOps.  If DevOps is the intersection of
 "Developer" and "Operations," and we want to map this idea to high performance computing,
 then we can define RSE-ops as the intersection of Research Software Engineering and Operations. 
 Research Software Engineers (RSEs) are the individuals writing code for scientific software, 
-and supporting resarchers to use codes on high performance computing systems.
+and supporting researchers to use codes on high performance computing systems.
 RSE-ops, then, generally refers to best practices for development and operations of scientific software. 
 It's important to note that HPC is only a subset of research software engineering. However,
 because so many modern applications are web-based (or extend beyond HPC) it's important to 
 consider that set as part of a larger scientific, or research software engineering, universe.
 
-**under development**
+This project is a community initiative started at LLNL by [@vsoch](https://github.com/vsoch) and under the umbrella of
+the [RADIUSS](https://software.llnl.gov/radiuss/policies/) initiatives.
 
 ## The Landscape
 
-To learn more about RSE-ops, we invite you to visit the [landscape](https://vsoch.github.io/rse-ops).
+To learn more about RSE-ops, we invite you to visit the [landscape](https://rse-radiuss.github.io/rse-ops).
 
 ## Quick Start
 
@@ -111,3 +112,29 @@ the following:
 $ docker run -it -v $PWD:/code latex2md
 ```
 
+## Thank you
+
+Thank you to contributors to the original Overleaf document that are not included
+in the version history, including:
+
+ - [tgamblin](https://github.com/tgamblin)
+ - [reidpr](https://github.com/reidpr)
+
+This is a community effort across national labs, academic institutions, and interested
+parties in industry, and we encourage you to participate! 
+
+License
+-------
+
+Copyright (c) 2017-2021, Lawrence Livermore National Security, LLC
+and contributors.
+
+This project is licensed under the MIT license [LICENSE](./LICENSE).
+
+Copyrights and patents in the RSE-ops project are retained by
+contributors. No copyright assignment is required to contribute to this
+project.
+
+This work was produced under the auspices of the U.S. Department of
+Energy by Lawrence Livermore National Laboratory under Contract
+DE-AC52-07NA27344.
