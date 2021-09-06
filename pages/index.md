@@ -8,7 +8,11 @@ permalink: /
 
 ## The RSE-ops Landscape
 
+<div class="card">
+
 {% include paper/abstract.md %}
 
 
 <p style="color:purple">This site is under development, not completely styled (and a little ugly!) so stay tuned and come back later for updates!</p>
+
+</div>
