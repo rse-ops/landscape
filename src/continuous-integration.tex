@@ -1,40 +1,43 @@
-Continuous integration is an established practice of continually testing and
-building before deployment.  It typically is focused around a version
-controlled code-base (e.g., GitHub or GitLab \cite{github,gitlab}) and
-developers collaborate to review code, ensure that tests pass, and then merge
-into a main branch. The goals are generally to ensure that when a piece or
-software or service hits a production resource, there will be no bugs or
-errors. Artifacts can be built and deployed on an event such as a merge, or for
-a versioned release. The benefits of CI practices are obvious, allowing
-developers to more easily collaborate on a code-base, and interact with
-production artifacts on resources of interest. For DevOps this typically
-includes different container orchestration services, instances, or app
-deployments, and for RSE-ops this would likely mean a local server or HPC
-cluster. The version control system also typically provides an interface to
-make it easy to report and respond to bugs (typically called issues) along with
-making suggestions to improve code (called pull or merge requests) and tracking
-progress.  This kind of workflow fits well into any DevOps environment where
-change is a constant.
+Continuous integration is the effort to continually test and build the codebase
+while it is being changed by developers. The rationale being: the earlier the
+code is tested, the earlier we catch bugs and new changes can be integrated.
+"Continously" integrating is of course out of reach, but it is commonly
+accepted as a metric of how agile the code team is.
 
-In the context of HPC, the diversity of resources that codes need to run on
-proves to be a much larger challenge for CI. The most popular, public CI
-services are not designed to interact with a batch system. It typically isn't
-sufficient to just test on a standard Linux x64, Mac, and Windows architecture,
-but several architectures across different operating systems (primarily Linux)
-that reflect the variety of the cluster nodes. The first challenge this
-presents is that most standard, web-based CI services (e.g., GitHub actions
-runners, standard GitLab runners, TravisCI, Jenkins, and CircleCI) don't
-provide a rich variety of architectures or graphical processing units (GPU), or
-when they do, they don't provide much control of when you get them.
+Integrating changes continuously requires automated testing, and contributions
+of small sizes so that they can be reviewed quickly and remain easy to
+understand. Those are means to CI, but can be viewed as goals by themselves.
 
-For this reason, for research software we typically see the developers still
-develop using these systems, but then are not able to test on all the systems
-that might be needed.  The challenge is thus getting any kind of modern
-web-based interface linked up directly to a cluster to run tests. Work at
-national labs using GitLab \cite{Mendoza_undated-lz,noauthor_undated-fv}, and
-specifically having a locally deployed Gitlab server with custom runners on
-various resources \cite{noauthor_undated-jd} has been a way to unite these two
-worlds.  Managing such an integration requires thinking about how to manage
-resources, user accounts, time allocations, and machine access. Another
-challenge is that there is is no standard workflow language for CI, and perhaps
-there should be.
+Reviews form a typical bottleneck to continuous integration: it is the
+last manual part of the process. This is why it is key to make reviews as
+streamlined as possible. This means in particular: Automated testing should
+capture as much relevant information as possible ( code style compliance,
+compiling in various contexts, unit-testing and testing with high coverage).
+Test results should be displayed intelligibly, the reviewer needs to have
+confidence that the report is comprehensive. Reproducing tests and the new
+feature should be straightforward.
+
+In the DevOps culture this implies working with container orchestration
+services. In the context of HPC, the diversity of systems that codes need to
+run on turns into a challenge for CI. It is useful yet insufficient to just
+test on a standard Linux x64, Mac, and Windows architecture. Most public CI
+services are not designed to interact with a batch system. One solution is to
+registering a local server or HPC cluster in the CI service provider, with the
+caveat that those cluster come with security requirements that often forbit it.
+
+For this reason, research software development may happen on any of these
+exotic systems but then testing is rather limited. Work at national labs using
+GitLab \cite{Mendoza_undated-lz,noauthor_undated-fv}, and specifically having a
+locally deployed Gitlab server with custom runners on various resources
+\cite{noauthor_undated-jd} has been a way to bridge the gap between HPC centers
+and web-based CI service providers. Managing this infrastructure requires
+managing resources, user accounts, time allocations, and machine access, and
+a lot of work has been dedicated to match the security requirements.
+
+Another challenge is that there is no standard workflow language for CI.
+After the realization that infrastructure-as-code (using a text based, version
+controlled workflow implementation) is more maintainable that UI configured CI,
+the consensus was that YAML provided a convenient format to implement CI, but
+languages varies between CI providers. Best practice suggest keeping scripts
+outside of the YAML implementation to allow for easier translation between
+languages.
