@@ -19,6 +19,117 @@
         - name: Podman
           img: podman.png
 
+      # Metadata to drive the matrix of choices
+      # docker, charliecloud, shifter, singularity, podman
+      matrix:
+        - name: rootless
+          description: The container technology allows creation, running, and managment of containers by users without administrative privileges
+          values:
+            docker: no
+            charliecloud: yes
+            shifter: "?"
+            singularity: yes
+            podman: yes
+
+        - name: gpu_support
+          description: The container technology can easily harness GPUs on the system.
+          values:
+            docker: no
+            charliecloud: yes
+            shifter: "?"
+            singularity: yes
+            podman: "?"
+
+        - name: x11
+          description: The container technology can easily support X11 displays.
+          values:
+            docker: no
+            charliecloud: yes
+            shifter: "?"
+            singularity: "?"
+            podman: "?"
+
+        - name: dockerfile
+          description: The container technology can build from a Dockerfile
+          values:
+            docker: yes
+            charliecloud: yes
+            shifter: yes
+            singularity: no
+            podman: yes
+
+        - name: infiniband
+          description: The container works seamlessly with the infiniband communications standard.
+          values:
+            docker: no
+            charliecloud: "?"
+            shifter: "?"
+            singularity: yes
+            podman: "?"
+
+        - name: kubernetes
+          description: There is an integration or native support for container technology with kubernetes.
+          values:
+            docker: yes
+            charliecloud: "?"
+            shifter: "?"
+            singularity: no
+            podman: yes
+
+        - name: hpc_safe
+          description: The container technology is considered safe to use on a high performance computing system.
+          values:
+            docker: no
+            charliecloud: yes
+            shifter: yes
+            singularity: yes
+            podman: yes
+
+        - name: orchestration
+          description: The container technology provides tooling for simple container orchestration (e.g., a web server and database)
+          values:
+            docker: yes
+            charliecloud: no
+            shifter: no
+            singularity: yes
+            podman: "?"
+
+        - name: oci_image_compatible
+          description: The container technology can build from Opencontainer Image bundles
+          values:
+            docker: yes
+            charliecloud: "?"
+            shifter: "?"
+            singularity: "?"
+            podman: yes
+
+        - name: oci_distribution_push
+          description: The container technology can push to an OCI registry
+          values:
+            docker: yes
+            charliecloud: "?"
+            shifter: "?"
+            singularity: "no"
+            podman: yes
+
+        - name: oci_distribution_pull
+          description: The container technology can pull from an OCI registry
+          values:
+            docker: yes
+            charliecloud: "yes"
+            shifter: "yes"
+            singularity: "yes"
+            podman: yes
+
+        - name: oras
+          description: The container technology can interact with an ORAS endpoint
+          values:
+            docker: yes
+            charliecloud: "?"
+            shifter: "?"
+            singularity: "yes"
+            podman: "?"
+
     - name: Version Control
       description: Version Control Systems (vcs) are a fundamental ingredient to working on and sharing source code.
       slug: vcs
@@ -31,6 +142,9 @@
           img: subversion.png
         - name: mercurial
           img: mercurial.png
+
+      # git, subversion, mercurial
+      # TODO: I think the recommended technology is always going to be git here.
 
     - name: Compilers
       description: Compilers are the bread and butter of scientific software to turn human readable code into a machine-readable version.
@@ -51,6 +165,8 @@
         - name: mpicc    
           img: mpicc.png
 
+      # TODO I don't have the expertise to help choose compilers!, aside from languages...
+
     - name: Programming Languages
       description: Programming languages are another cornerstone of of RSE-ops and scientific software. As programmers, we love and need them.
       slug: languages
@@ -65,7 +181,35 @@
           img: julia.png
         - name: Go 
           img: go.png
+
+      # TODO add other languages, C/C++/Fortran
   
+      # Python, R, Julia, Go
+      matrix:
+        - name: compiled
+          description: Are you looking for a compiled language?
+          values:
+            python: no
+            julia: yes
+            r: no
+            go: yes
+
+        - name: scientific_programming
+          description: Do you want a language that is traditionally for scientific programming?
+          values:
+            python: yes
+            julia: yes
+            r: yes
+            go: no
+
+        - name: web_interfaces
+          description: Do you want a language that can be used to develop front and back end?
+          values:
+            python: yes
+            julia: no
+            r: yes
+            go: yes
+
     - name: Database
       description: Databases are a subset of scientific software that allow us to save and query larger amounts of data in a systematic way.
       slug: db
@@ -93,6 +237,21 @@
         - name: CouchDB
           img: couch.png
 
+      matrix:
+        - name: relational
+          description: Do you want a relational database?
+          values:
+            mariadb: yes
+            postgresql: yes
+            mysql: yes
+            monogodb: no
+            sqlite: yes
+            redis: no
+            hadoop: no
+            neo4j: no
+            cassandra: yes
+            couchdb: no
+
     - name: Orchestration and Scheduling
       description: Schedulers and orchestrator allow us to scale running workflows or analyses, regardless if we are on HPC or cloud.
       slug: scheduling
@@ -107,7 +266,18 @@
           img: k8.png
         - name: HTCondor
           img: htcondor.png
-    
+
+      # TODO add flux
+
+      matrix:
+        - name: hpc
+          description: Do you want a scjeduler for HPC?
+          values:
+            slurm: yes
+            torque: yes
+            kubernetes: no
+            htcondor: yes 
+               
     - name: Building, Packaging, Application Delivery
       description: Package managers, or more generally, build tools and associated delivery mechanisms, are essential for building and getting software to where we need it.
       slug: builds
@@ -129,6 +299,8 @@
           img: pypi.jpg
         - name: Spack
           img: spack.svg
+
+     # TODO what are decision points here? Should there be another category?
 
     - name: Streaming and Messaging
       description: Streaming and Messaging tools are a common means in HPC to power large simulations and other analyses.
