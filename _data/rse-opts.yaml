@@ -27,9 +27,27 @@
           values:
             docker: no
             charliecloud: yes
-            shifter: "?"
+            shifter: yes
             singularity: yes
             podman: yes
+
+        - name: fully_unprivileged_workflow
+          description: Along with being considered rootless, the container does not use setuid, setgid, setcap code or privilege helpers. 
+          values:
+            docker: no
+            charliecloud: yes
+            shifter: "?"
+            singularity: no
+            podman: "?"
+
+        - name: security_audit
+          description: The container technology has had a complete security audit by a professional company.
+          values:
+            docker: "?"
+            charliecloud: "?"
+            shifter: "?"
+            singularity: "?"
+            podman: "?"
 
         - name: gpu_support
           description: The container technology can easily harness GPUs on the system.
@@ -46,7 +64,7 @@
             docker: no
             charliecloud: yes
             shifter: "?"
-            singularity: "?"
+            singularity: yes
             podman: "?"
 
         - name: dockerfile
@@ -62,7 +80,7 @@
           description: The container works seamlessly with the infiniband communications standard.
           values:
             docker: no
-            charliecloud: "?"
+            charliecloud: yes
             shifter: "?"
             singularity: yes
             podman: "?"
@@ -71,8 +89,8 @@
           description: There is an integration or native support for container technology with kubernetes.
           values:
             docker: yes
-            charliecloud: "?"
-            shifter: "?"
+            charliecloud: no
+            shifter: no
             singularity: no
             podman: yes
 
@@ -98,7 +116,7 @@
           description: The container technology can build from Opencontainer Image bundles
           values:
             docker: yes
-            charliecloud: "?"
+            charliecloud: no
             shifter: "?"
             singularity: "?"
             podman: yes
@@ -107,7 +125,7 @@
           description: The container technology can push to an OCI registry
           values:
             docker: yes
-            charliecloud: "?"
+            charliecloud: yes
             shifter: "?"
             singularity: "no"
             podman: yes
@@ -125,8 +143,8 @@
           description: The container technology can interact with an ORAS endpoint
           values:
             docker: yes
-            charliecloud: "?"
-            shifter: "?"
+            charliecloud: no
+            shifter: no
             singularity: "yes"
             podman: "?"
 
