@@ -139,10 +139,28 @@
             singularity: "yes"
             podman: yes
 
-        - name: oras
-          description: The container technology can interact with an ORAS endpoint
+        - name: oras_push
+          description: The container technology can push to an oras endpoint
           values:
-            docker: yes
+            docker: "?"
+            charliecloud: no
+            shifter: no
+            singularity: "yes"
+            podman: "?"
+
+        - name: encryption_signing
+          description: Containers can be encrypted and signed
+          values:
+            docker: "?"
+            charliecloud: "?"
+            shifter: no
+            singularity: "yes"
+            podman: "?"
+
+        - name: oras_pull
+          description: The container technology can pull from an oras endpoint
+          values:
+            docker: "?"
             charliecloud: no
             shifter: no
             singularity: "yes"
