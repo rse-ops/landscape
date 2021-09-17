@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What technology or tool should you use?
-permalink: /choosers/
+permalink: /choosers
 ---
 
 {% include main_toc.html %}
