@@ -1,0 +1,19 @@
+unique_id	order	tooltip	question	options	include
+question_rootless	1	The container technology allows creation, running, and managment of containers by users without administrative privileges	Do you want a rootles container?	yes, no, not sure	yes
+question_fully_unprivileged_workflow	2	Along with being considered rootless, the container does not use setuid, setgid, setcap code or privilege helpers. 	Do you want a fully unprivileged workflow?	yes, no, not sure	yes
+question_gpu_support	4	The container technology can easily harness GPUs on the system.	Should the container technology easily support GPUs?	yes, no, not sure	yes
+question_x11	5	The container technology can easily support X11 displays.	Do you need x11 support?	yes, no, not sure	yes
+question_dockerfile	6	The container technology can build from a Dockerfile	Do you want to build from a Dockerfile?	yes, no, not sure	yes
+question_infiniband	7	The container works seamlessly with the infiniband communications standard.	Do you want to use Infiniband?	yes, no, not sure	yes
+question_kubernetes	8	There is an integration or native support for container technology with kubernetes.	Do you want to use the technology with Kubernetes?	yes, no, not sure	yes
+question_hpc_usage	9	The container technology is used on high performance computing systems.	Do you want a technology that is used on HPC?	yes, no, not sure	yes
+question_orchestration	10	The container technology provides tooling for simple container orchestration (e.g., a web server and database)	Do you want simple tooling for orchestration (e.g., web and database?)	yes, no, not sure	yes
+question_oci_image_compatible	11	The container technology can build from Opencontainer Image bundles	Do you need to build from Opencontainer Image bundles?	yes, no, not sure	yes
+question_oci_distribution_push	12	The container technology can push to an OCI registry	Do you need to push to an OCI registry?	yes, no, not sure	yes
+question_oci_distribution_pull	13	The container technology can pull from an OCI registry	Do you need to pull from an OCI registry?	yes, no, not sure	yes
+question_oras_push	14	The container technology can push to an oras endpoint	Do you need to push to an ORAS endpoint?	yes, no, not sure	yes
+question_encryption_signing	15	Containers can be encrypted and signed	Do you need to encrypt and sign containers?	yes, no, not sure	yes
+question_oras_pull	16	The container technology can pull from an oras endpoint	Do you need to pull from an oras endpoint?	yes, no, not sure	yes
+question_open_source	17	The container technology has an open source license and community	Do you want an open source license and community?	yes, no, not sure	yes
+question_commercial_backing	18	The container technology has commercial backing	Should the container technology have commercial backing?	yes, no, not sure	yes
+question_commercial_registry	19	The commercial entity provides a registry that supports heavy usage without payment	Should the container vendor provide a commercial registry?	yes, no, not sure	yes

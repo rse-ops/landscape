@@ -1,0 +1,537 @@
+{
+    "questions": [
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "1",
+            "question": "Do you want a rootles container?",
+            "tooltip": "The container technology allows creation, running, and managment of containers by users without administrative privileges",
+            "unique_id": "question_rootless"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "10",
+            "question": "Do you want simple tooling for orchestration (e.g., web and database?)",
+            "tooltip": "The container technology provides tooling for simple container orchestration (e.g., a web server and database)",
+            "unique_id": "question_orchestration"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "11",
+            "question": "Do you need to build from Opencontainer Image bundles?",
+            "tooltip": "The container technology can build from Opencontainer Image bundles",
+            "unique_id": "question_oci_image_compatible"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "12",
+            "question": "Do you need to push to an OCI registry?",
+            "tooltip": "The container technology can push to an OCI registry",
+            "unique_id": "question_oci_distribution_push"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "13",
+            "question": "Do you need to pull from an OCI registry?",
+            "tooltip": "The container technology can pull from an OCI registry",
+            "unique_id": "question_oci_distribution_pull"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "14",
+            "question": "Do you need to push to an ORAS endpoint?",
+            "tooltip": "The container technology can push to an oras endpoint",
+            "unique_id": "question_oras_push"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "15",
+            "question": "Do you need to encrypt and sign containers?",
+            "tooltip": "Containers can be encrypted and signed",
+            "unique_id": "question_encryption_signing"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "16",
+            "question": "Do you need to pull from an oras endpoint?",
+            "tooltip": "The container technology can pull from an oras endpoint",
+            "unique_id": "question_oras_pull"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "17",
+            "question": "Do you want an open source license and community?",
+            "tooltip": "The container technology has an open source license and community",
+            "unique_id": "question_open_source"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "18",
+            "question": "Should the container technology have commercial backing?",
+            "tooltip": "The container technology has commercial backing",
+            "unique_id": "question_commercial_backing"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "19",
+            "question": "Should the container vendor provide a commercial registry?",
+            "tooltip": "The commercial entity provides a registry that supports heavy usage without payment",
+            "unique_id": "question_commercial_registry"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "2",
+            "question": "Do you want a fully unprivileged workflow?",
+            "tooltip": "Along with being considered rootless, the container does not use setuid, setgid, setcap code or privilege helpers.",
+            "unique_id": "question_fully_unprivileged_workflow"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "4",
+            "question": "Should the container technology easily support GPUs?",
+            "tooltip": "The container technology can easily harness GPUs on the system.",
+            "unique_id": "question_gpu_support"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "5",
+            "question": "Do you need x11 support?",
+            "tooltip": "The container technology can easily support X11 displays.",
+            "unique_id": "question_x11"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "6",
+            "question": "Do you want to build from a Dockerfile?",
+            "tooltip": "The container technology can build from a Dockerfile",
+            "unique_id": "question_dockerfile"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "7",
+            "question": "Do you want to use Infiniband?",
+            "tooltip": "The container works seamlessly with the infiniband communications standard.",
+            "unique_id": "question_infiniband"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "8",
+            "question": "Do you want to use the technology with Kubernetes?",
+            "tooltip": "There is an integration or native support for container technology with kubernetes.",
+            "unique_id": "question_kubernetes"
+        },
+        {
+            "include": "yes",
+            "options": [
+                "yes",
+                "no",
+                "not sure"
+            ],
+            "order": "9",
+            "question": "Do you want a technology that is used on HPC?",
+            "tooltip": "The container technology is used on high performance computing systems.",
+            "unique_id": "question_hpc_usage"
+        }
+    ],
+    "tools": [
+        {
+            "category": "containers",
+            "description": "Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.",
+            "group": "Docker Inc.",
+            "include": "yes",
+            "name": "Docker",
+            "question_commercial_backing": [
+                "yes"
+            ],
+            "question_commercial_registry": [
+                "no"
+            ],
+            "question_dockerfile": [
+                "yes"
+            ],
+            "question_encryption_signing": [
+                "yes"
+            ],
+            "question_fully_unprivileged_workflow": [
+                "no"
+            ],
+            "question_gpu_support": [
+                "no"
+            ],
+            "question_hpc_usage": [
+                "no"
+            ],
+            "question_infiniband": [
+                "no"
+            ],
+            "question_kubernetes": [
+                "yes"
+            ],
+            "question_oci_distribution_pull": [
+                "yes"
+            ],
+            "question_oci_distribution_push": [
+                "yes"
+            ],
+            "question_oci_image_compatible": [
+                "yes"
+            ],
+            "question_open_source": [
+                "yes"
+            ],
+            "question_oras_pull": [
+                "no"
+            ],
+            "question_oras_push": [
+                "no"
+            ],
+            "question_orchestration": [
+                "yes"
+            ],
+            "question_rootless": [
+                "no"
+            ],
+            "question_x11": [
+                "no"
+            ],
+            "unique_id": "containers_docker",
+            "url": "https://docs.docker.com/"
+        },
+        {
+            "category": "containers",
+            "description": "Charliecloud provides user-defined software stacks (UDSS) for high-performance computing (HPC) centers.",
+            "group": "Los Alamos National Lab",
+            "include": "yes",
+            "name": "Charliecloud",
+            "question_commercial_backing": [
+                "no"
+            ],
+            "question_commercial_registry": [
+                "no"
+            ],
+            "question_dockerfile": [
+                "yes"
+            ],
+            "question_encryption_signing": [
+                "no"
+            ],
+            "question_fully_unprivileged_workflow": [
+                "yes"
+            ],
+            "question_gpu_support": [
+                "yes"
+            ],
+            "question_hpc_usage": [
+                "yes"
+            ],
+            "question_infiniband": [
+                "yes"
+            ],
+            "question_kubernetes": [
+                "no"
+            ],
+            "question_oci_distribution_pull": [
+                "yes"
+            ],
+            "question_oci_distribution_push": [
+                "no"
+            ],
+            "question_oci_image_compatible": [
+                "no"
+            ],
+            "question_open_source": [
+                "yes"
+            ],
+            "question_oras_pull": [
+                "no"
+            ],
+            "question_oras_push": [
+                "no"
+            ],
+            "question_orchestration": [
+                "no"
+            ],
+            "question_rootless": [
+                "yes"
+            ],
+            "question_x11": [
+                "yes"
+            ],
+            "unique_id": "containers_charliecloud",
+            "url": "https://hpc.github.io/charliecloud/"
+        },
+        {
+            "category": "containers",
+            "description": "Shifter enables container images for HPC, including a 1) a utility that typically runs on the compute node that creates the run time environment for the application 2) an image gateway service that pulls images from a registry and repacks it in a format suitable for the HPC system (typically squashfs) 3) and example scripts/plugins to integrate Shifter with various batch scheduler systems.",
+            "group": "NERSC",
+            "include": "yes",
+            "name": "Shifter",
+            "question_commercial_backing": [
+                "no"
+            ],
+            "question_commercial_registry": [
+                "no"
+            ],
+            "question_dockerfile": [
+                "yes"
+            ],
+            "question_encryption_signing": [
+                "no"
+            ],
+            "question_fully_unprivileged_workflow": [
+                "no"
+            ],
+            "question_gpu_support": [
+                "yes"
+            ],
+            "question_hpc_usage": [
+                "yes"
+            ],
+            "question_infiniband": [
+                "no"
+            ],
+            "question_kubernetes": [
+                "no"
+            ],
+            "question_oci_distribution_pull": [
+                "yes"
+            ],
+            "question_oci_distribution_push": [
+                "no"
+            ],
+            "question_oci_image_compatible": [
+                "no"
+            ],
+            "question_open_source": [
+                "yes"
+            ],
+            "question_oras_pull": [
+                "no"
+            ],
+            "question_oras_push": [
+                "no"
+            ],
+            "question_orchestration": [
+                "no"
+            ],
+            "question_rootless": [
+                "yes"
+            ],
+            "question_x11": [
+                "no"
+            ],
+            "unique_id": "containers_shifter",
+            "url": "https://www.nersc.gov/research-and-development/user-defined-images/"
+        },
+        {
+            "category": "containers",
+            "description": "Singularity is a free, cross-platform and open-source computer program that performs operating-system-level virtualization also known as containerization.",
+            "group": "Sylabs Inc. and HPCng",
+            "include": "yes",
+            "name": "Singularity",
+            "question_commercial_backing": [
+                "yes"
+            ],
+            "question_commercial_registry": [
+                "no"
+            ],
+            "question_dockerfile": [
+                "no"
+            ],
+            "question_encryption_signing": [
+                "yes"
+            ],
+            "question_fully_unprivileged_workflow": [
+                "no"
+            ],
+            "question_gpu_support": [
+                "yes"
+            ],
+            "question_hpc_usage": [
+                "yes"
+            ],
+            "question_infiniband": [
+                "yes"
+            ],
+            "question_kubernetes": [
+                "no"
+            ],
+            "question_oci_distribution_pull": [
+                "no"
+            ],
+            "question_oci_distribution_push": [
+                "no"
+            ],
+            "question_oci_image_compatible": [
+                "yes"
+            ],
+            "question_open_source": [
+                "yes"
+            ],
+            "question_oras_pull": [
+                "yes"
+            ],
+            "question_oras_push": [
+                "yes"
+            ],
+            "question_orchestration": [
+                "yes"
+            ],
+            "question_rootless": [
+                "yes"
+            ],
+            "question_x11": [
+                "yes"
+            ],
+            "unique_id": "containers_singularity",
+            "url": "https://sylabs.io/docs/"
+        },
+        {
+            "category": "containers",
+            "description": "Podman is a daemonless container engine for developing, managing, and running OCI Containers on your Linux System. Containers can either be run as root or in rootless mode. Simply put: alias docker=podman.",
+            "group": "RedHat",
+            "include": "yes",
+            "name": "Podman",
+            "question_commercial_backing": [
+                "yes"
+            ],
+            "question_commercial_registry": [
+                "yes"
+            ],
+            "question_dockerfile": [
+                "yes"
+            ],
+            "question_encryption_signing": [
+                "no"
+            ],
+            "question_fully_unprivileged_workflow": [
+                "no"
+            ],
+            "question_gpu_support": [
+                "no"
+            ],
+            "question_hpc_usage": [
+                "yes"
+            ],
+            "question_infiniband": [
+                "no"
+            ],
+            "question_kubernetes": [
+                "yes"
+            ],
+            "question_oci_distribution_pull": [
+                "yes"
+            ],
+            "question_oci_distribution_push": [
+                "yes"
+            ],
+            "question_oci_image_compatible": [
+                "yes"
+            ],
+            "question_open_source": [
+                "yes"
+            ],
+            "question_oras_pull": [
+                "no"
+            ],
+            "question_oras_push": [
+                "no"
+            ],
+            "question_orchestration": [
+                "yes"
+            ],
+            "question_rootless": [
+                "yes"
+            ],
+            "question_x11": [
+                "no"
+            ],
+            "unique_id": "containers_podman",
+            "url": "https://podman.io/"
+        }
+    ]
+}

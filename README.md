@@ -112,6 +112,12 @@ the following:
 $ docker run -it -v $PWD:/code latex2md
 ```
 
+### 4. Chooser Interface
+
+For each category of technology, we have a "chooser" interface, or a place where
+ you can go (typically as a new user) to answer questions relevant to your use case,
+ and get a recommendation of a technology. You can read [more about the chooser here](docs/chooser.md).
+
 ## Thank you
 
 Thank you to contributors to the original Overleaf document that are not included
