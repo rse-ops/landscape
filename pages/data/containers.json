@@ -426,7 +426,7 @@
                 "yes"
             ],
             "question_fully_unprivileged_workflow": [
-                "no"
+                "yes"
             ],
             "question_gpu_support": [
                 "yes"
@@ -441,7 +441,7 @@
                 "no"
             ],
             "question_oci_distribution_pull": [
-                "no"
+                "yes"
             ],
             "question_oci_distribution_push": [
                 "no"
@@ -489,7 +489,7 @@
                 "no"
             ],
             "question_fully_unprivileged_workflow": [
-                "no"
+                "yes"
             ],
             "question_gpu_support": [
                 "no"
