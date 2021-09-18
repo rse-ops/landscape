@@ -8,7 +8,7 @@
                 "not sure"
             ],
             "order": "1",
-            "question": "Do you want a rootles container?",
+            "question": "Do you want a rootless container?",
             "tooltip": "The container technology allows creation, running, and managment of containers by users without administrative privileges",
             "unique_id": "question_rootless"
         },
