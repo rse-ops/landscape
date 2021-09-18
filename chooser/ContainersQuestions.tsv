@@ -6,7 +6,7 @@ question_x11	5	The container technology can easily support X11 displays.	Do you 
 question_dockerfile	6	The container technology can build from a Dockerfile	Do you want to build from a Dockerfile?	yes, no, not sure	yes
 question_infiniband	7	The container works seamlessly with the infiniband communications standard.	Do you want to use Infiniband?	yes, no, not sure	yes
 question_kubernetes	8	There is an integration or native support for container technology with kubernetes.	Do you want to use the technology with Kubernetes?	yes, no, not sure	yes
-question_hpc_usage	9	The container technology is used on high performance computing systems.	Do you want a technology that is used on HPC?	yes, no, not sure	yes
+question_hpc_compatibility	9	The container technology is compatible with high performance computing systems.	Do you want a technology that is compatible with HPC?	yes, no, not sure	yes
 question_orchestration	10	The container technology provides tooling for simple container orchestration (e.g., a web server and database)	Do you want simple tooling for orchestration (e.g., web and database?)	yes, no, not sure	yes
 question_oci_image_compatible	11	The container technology can build from Opencontainer Image bundles	Do you need to build from Opencontainer Image bundles?	yes, no, not sure	yes
 question_oci_distribution_push	12	The container technology can push to an OCI registry	Do you need to push to an OCI registry?	yes, no, not sure	yes

@@ -212,9 +212,9 @@
                 "not sure"
             ],
             "order": "9",
-            "question": "Do you want a technology that is used on HPC?",
-            "tooltip": "The container technology is used on high performance computing systems.",
-            "unique_id": "question_hpc_usage"
+            "question": "Do you want a technology that is compatible with HPC?",
+            "tooltip": "The container technology is compatible with high performance computing systems.",
+            "unique_id": "question_hpc_compatibility"
         }
     ],
     "tools": [
@@ -242,7 +242,7 @@
             "question_gpu_support": [
                 "no"
             ],
-            "question_hpc_usage": [
+            "question_hpc_compatibility": [
                 "no"
             ],
             "question_infiniband": [
@@ -305,7 +305,7 @@
             "question_gpu_support": [
                 "yes"
             ],
-            "question_hpc_usage": [
+            "question_hpc_compatibility": [
                 "yes"
             ],
             "question_infiniband": [
@@ -368,7 +368,7 @@
             "question_gpu_support": [
                 "yes"
             ],
-            "question_hpc_usage": [
+            "question_hpc_compatibility": [
                 "yes"
             ],
             "question_infiniband": [
@@ -431,7 +431,7 @@
             "question_gpu_support": [
                 "yes"
             ],
-            "question_hpc_usage": [
+            "question_hpc_compatibility": [
                 "yes"
             ],
             "question_infiniband": [
@@ -494,7 +494,7 @@
             "question_gpu_support": [
                 "no"
             ],
-            "question_hpc_usage": [
+            "question_hpc_compatibility": [
                 "yes"
             ],
             "question_infiniband": [
