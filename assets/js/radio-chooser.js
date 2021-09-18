@@ -6,7 +6,7 @@ Vue.component('chooser', {
             <div class="row" v-for="question in questions">  
                <div class="col-md-12">
                 <div class="form-check">
-                    <input class="form-check-input" @change="filterOptions" type="checkbox" value="" v-bind:id="question.unique_id">
+                    <input class="form-check-input question" @change="filterOptions" type="checkbox" value="" v-bind:id="question.unique_id">
                     <label class="form-check-label" :for="question.unique_id">{{ question.question }}</label><i v-if="question.tooltip" style="cursor:pointer; padding-left:5px; color:#CCC" class="fa fa-info-circle" data-container="body" data-toggle="popover" data-placement="top" :title="question.tooltip"></i>
                 </div>
                 </div>
@@ -84,8 +84,8 @@ Vue.component('chooser', {
 
     // Clear all selections to start over 
     resetOptions: function(event) {
-      $.each($(".question option:selected"), function() {
-        $(this).prop('selected', false);
+      $.each($(".question"), function() {
+        $(this).prop('checked', false);
       });
       this.choices = Object();
       $(".cell").removeClass(this.unselected_class);
