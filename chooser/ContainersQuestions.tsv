@@ -1,5 +1,5 @@
 unique_id	order	tooltip	question	options	include
-question_rootless	1	The container technology allows creation, running, and managment of containers by users without administrative privileges	Do you want a rootles container?	yes, no, not sure	yes
+question_rootless	1	The container technology allows creation, running, and managment of containers by users without administrative privileges	Do you want a rootless container?	yes, no, not sure	yes
 question_fully_unprivileged_workflow	2	Along with being considered rootless, the container does not use setuid, setgid, setcap code or privilege helpers. 	Do you want a fully unprivileged workflow?	yes, no, not sure	yes
 question_gpu_support	4	The container technology can easily harness GPUs on the system.	Should the container technology easily support GPUs?	yes, no, not sure	yes
 question_x11	5	The container technology can easily support X11 displays.	Do you need x11 support?	yes, no, not sure	yes
