@@ -492,13 +492,13 @@
                 "yes"
             ],
             "question_gpu_support": [
-                "no"
+                "yes"
             ],
             "question_hpc_compatibility": [
                 "yes"
             ],
             "question_infiniband": [
-                "no"
+                "yes"
             ],
             "question_kubernetes": [
                 "yes"
@@ -528,7 +528,7 @@
                 "yes"
             ],
             "question_x11": [
-                "no"
+                "yes"
             ],
             "unique_id": "containers_podman",
             "url": "https://podman.io/"
