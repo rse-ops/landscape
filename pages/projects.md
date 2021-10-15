@@ -6,8 +6,8 @@ permalink: /projects
 
 <ul id="filters" class="clearfix">
 <li><span class="filter"><a href="{{ site.baseurl }}/">home</a></span></li>
-  <li><span class="filter active" data-filter="{% for universe in site.data.rse-opts %}{% for category in universe.categories %}.{{ category.slug }} {% endfor %}{% endfor %}">all</span></li>
-{% for universe in site.data.rse-opts %}{% for category in universe.categories %}<li><span class="filter" data-filter=".{{ category.slug }}">{{ category.slug }}</span></li>{% endfor %}{% endfor %}
+  <li><span style="color:white" class="filter active" data-filter="{% for universe in site.data.rse-opts %}{% for category in universe.categories %}.{{ category.slug }} {% endfor %}{% endfor %}">all</span></li>
+{% for universe in site.data.rse-opts %}{% for category in universe.categories %}<li><span style="color:white" class="filter" data-filter=".{{ category.slug }}">{{ category.slug }}</span></li>{% endfor %}{% endfor %}
 </ul>
 
 <div id="portfoliolist">

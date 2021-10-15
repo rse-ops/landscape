@@ -2,7 +2,7 @@
 
 # chooser tool to validate and parse exports to generate json for
 # a Chooser interface. Use chooser.py --help
-# for usage, or see the project README https://github.com/rse-radiuss/rse-ops
+# for usage, or see the project README https://github.com/rse-ops/landscape
 
 import argparse
 import json

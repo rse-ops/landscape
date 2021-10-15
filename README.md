@@ -2,9 +2,10 @@
 
 ![assets/img/rse-sun.png](assets/img/rse-sun.png)
 
-Welcome to the Research Software Engineering Operations (RSE-ops) repository! As you
+Welcome to the Research Software Engineering Operations (RSE-ops) landscape! As you
 might guess, RSE-ops is a flavor of DevOps.  If DevOps is the intersection of 
-"Developer" and "Operations," and we want to map this idea to high performance computing,
+"Developer" and "Operations," and we want to map this idea to research software engineering and 
+technologies that are more likely found in high performance computing and scientific software development,
 then we can define RSE-ops as the intersection of Research Software Engineering and Operations. 
 Research Software Engineers (RSEs) are the individuals writing code for scientific software, 
 and supporting researchers to use codes on high performance computing systems.
@@ -13,12 +14,12 @@ It's important to note that HPC is only a subset of research software engineerin
 because so many modern applications are web-based (or extend beyond HPC) it's important to 
 consider that set as part of a larger scientific, or research software engineering, universe.
 
-This project is a community initiative started at LLNL by [@vsoch](https://github.com/vsoch) and under the umbrella of
+This landscape and the [RSE-ops community](https://github.com/rse-ops) is a community initiative started at LLNL by [@vsoch](https://github.com/vsoch) and under the umbrella of
 the [RADIUSS](https://software.llnl.gov/radiuss/policies/) initiatives.
 
 ## The Landscape
 
-To learn more about RSE-ops, we invite you to visit the [landscape](https://rse-radiuss.github.io/rse-ops).
+To learn more about RSE-ops, we invite you to visit the [landscape](https://rse-ops.github.io/landscape).
 
 ## Quick Start
 
@@ -40,7 +41,7 @@ Run the jekyll server (requires jekyll installed)
 $ make run
 ```
 
-Open to [http://localhost:4000/rse-ops/](http://localhost:4000/rse-ops/)
+Open to [http://localhost:4000/landscape/](http://localhost:4000/landscape/)
 
 ## How does it work?
 

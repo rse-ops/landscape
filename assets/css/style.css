@@ -8,15 +8,16 @@ html {
 
 a {
   text-decoration: none !important;
+  color: #741755;
 }
 
 a:visited {
-  color: darkblue;
+  color: white;
 }
 
 body {
   font-family: Helvetica, Arial, Verdana;
-  background: lightskyblue;
+  background: #005dab;
 }
 
 #footer {
@@ -53,7 +54,7 @@ h1, h2 {
   display: block;
   padding: 5px 20px;
   text-decoration: none;
-  color: #666;
+  color: #005dab;
   cursor: pointer;
   transition: color 300ms ease-in-out;
 }
@@ -63,7 +64,7 @@ h1, h2 {
 }
 
 #filters li span.active {
-  background: #ededed;
+  background: #741755;
   color: #333;
 }
 
@@ -154,7 +155,7 @@ h1, h2 {
   color: inherit;
 }
 .category-card a:hover {
-  color: #5ad67d;
+  color: #741755;
 }
 .category-card:hover .photo {
   transform: scale(1.3) rotate(3deg);
@@ -247,7 +248,7 @@ h1, h2 {
   text-align: right;
 }
 .category-card .description .read-more a {
-  color: #5ad67d;
+  color: #741755;
   display: inline-block;
   position: relative;
 }
@@ -266,7 +267,7 @@ h1, h2 {
   content: "";
   position: absolute;
   height: 5px;
-  background: #5ad67d;
+  background: #741755;
   width: 35px;
   top: -0.75rem;
   border-radius: 3px;
@@ -415,7 +416,7 @@ h1, h2 {
   background-color: #f7f7f7;
   text-align: center;
   font-weight: 700;
-  color: coral;
+  color: #741755;
   cursor: pointer;
   transition: background-color 150ms ease-in-out;
 }

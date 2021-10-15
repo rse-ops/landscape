@@ -21,13 +21,13 @@ description: > # this means to ignore newlines until "baseurl:"
     that belong in the domain of RSE-ops, and provides them here for you to explore.
 
 url: "" # the subpath of your site, e.g. /blog
-baseurl: "/rse-ops"
+baseurl: "/landscape"
 
 # Build settings
 permalink: /:year/:title/
 markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
-repo: https://github.com/rse-radiuss/rse-ops
+repo: https://github.com/rse-ops/landscape
 
 # Collections
 collections:
