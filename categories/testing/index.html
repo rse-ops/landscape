@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Testing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="testing-for-rse-ops-vs-devops">Testing for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>There are arguably two kinds of testing - testing of systems, and testing of scientific software.</p>
+<h3 id="testing-scientific-software">Testing Scientific Software</h3>
+<p>There is a huge divide between testing scientific software and using it on the shared resource. The reproducibility crisis that grew in the early 2010s <a class="citation" href="#replication-crisis">[1]</a> did advocate for more use of version control <a class="citation" href="#github">[2], [3]</a> for research software collaboration and development, and the ease of integration of continuous integration (CI) external services for automated testing and deployment <a class="citation" href="#travis">[4], [5], [6]</a> made it more common for researchers to test and deploy their scientific software. It became more common practice to create releases alongside code, distribute them via packages managers, and even to provide containers that could be pulled and used on a cluster. However, this test and deployment process was notably separate from the HPC resources – it simply was not possible to test codes on all of the possible semi-customized HPC environments on which they might be run.</p>
+<p>Understandably there would be security issues connecting an external service to a shared resources, however this does not fully excuse the lack of innovation in this area. It should be easier for a researcher to test and even deploy their codes on or beside the resource that they ultimately will be used. While some centers do have testing clusters, it’s not always easy to justify cycles on them to be used just for testing. When software testing isn’t in the hands of the user, testing the software stack might fall in the hands of the system administrator or support staff of the HPC cluster, or even worse, nobody at all.</p>
+<p>Ideally, best practices for testing will embrace the current approaches that developers are already using to test and deploy software, namely using services like GitHub or GitLab and then creating releases, contributing install recipes to package managers, and deploying containers for quick usability. Arguably, what HPC centers might be able to bring to testing is scale. As tests need to be run frequently and across many different architectures, the incentive structure is arguably not there to maintain such a testing framework. Testing tools such as <a href="https://github.com/hpc/pavilion2">Pavilion2</a> and <a href="https://github.com/eth-cscs/reframe">ReFrame</a> are intended for facility testing, but there is no convergence on any kind of standard. Perhaps there should be, and this is something that should be discussed by the HPC community. The need seems to be there, as academic centers and national labs are slowly adopting their own strategies for quickly being able to run tests from version control on a cluster resource, <a class="citation" href="#"></a>, and likely these technologies will need to be shared with other institutions followed by convergence on a shared best practice.</p>
+<h3 id="testing-of-resources">Testing of Resources</h3>
+<p>Most centers do some kind of kernel and application bench-marking <a class="citation" href="#measuring-hpc">[7]</a>, along with testing of resources. For example, system administrators might use regression testing, including testing file permissions and mounts, communication between nodes and compatibility with the resource. For these regression tests, tools like Pavilion, <a href="https://github.com/mej/nhc">NHC</a> and Interstate are popular.</p>
+<p>Another continuous integration strategy is to focus on regression testing via tools like ReFrame. Tools of this type try to test HPC systems alongside software stacks directly on the resource, and typically separate from any web interface or alongside the code. ReFrame and Pavilion are designed to test the machine, and not the software. Ideally we would have a standard application testing tool. Likely better ability to do testing will come from improved integration of Continuous Integration (CI) services, discussed later in this paper.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="replication-crisis">“Replication Crisis.” https://en.wikipedia.org/wiki/Replication_crisis.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/replication-crisis/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/replication-crisis/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="github">“GitHub.” https://github.com.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/github/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/github/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="gitlab">“GitLab.” https://gitlab.com.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/gitlab/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/gitlab/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="travis">“Travis-CI.” https://travis-ci.org.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/travis/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/travis/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="circle">“Circle-CI.” https://circleci.com.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/circle/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/circle/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="jenkins">“Jenkins.” https://jenkins.io.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/jenkins/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/jenkins/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="measuring-hpc">“Measuring High-Performance Computing with Real Applications.” https://engineering.purdue.edu/paramnt/publications/SBA+08.pdf.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/measuring-hpc/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/measuring-hpc/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

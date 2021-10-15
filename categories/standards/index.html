@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Standards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="standards-for-rse-ops-vs-devops">Standards for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>Cloud services provided by several different vendors have flourished for many reasons, one of which is directly related to the community effort established around open source and standards.</p>
+<p>Specifically, the primary unit of operation, for DevOps, the container, has had extensive collaborative work in a community and governance structure called the Open Container Initiative (OCI) <a class="citation" href="#oci">[1]</a>. The history behind OCI reflects an organic, open source and community effort growing to meet the needs of a changing industry landscape. Specifically, Docker <a class="citation" href="#docker">[2]</a>, by way of being the first prominent, commercial container technology and having developed its own container registry, Docker Hub <a class="citation" href="#docker-hub">[3]</a>, was an early contributor to these standards. An early version of their RESTful API to interact with container manifests and layers to push or pull containers was adopted into the first distribution spec of OCI, along with an image, runtime, and digest specifications. A container registry or technology is considered OCI compliant if it meets the criteria of these standards. The OCI standards ensured that there was consistency between cloud providers, and that users could translate between them without issue. Representatives from the major industry leaders worked on the standards together, and eventually community members for traditionally non-OCI compliant containers like Singularity joined the effort.</p>
+<p>While having common standards is considered good practice in the RSE-ops space, because the effort has been primarily industry driven, the needs of more academic or HPC container technologies are not well represented. Academic and high performance computing efforts are arguably siloed, meaning that there are many libraries developed over time that are rooted in a particular lab or institution, and (with a few exceptions) groups do not work together. RSE-ops can only be successful if this issue is addressed, meaning that groups from national labs, academic institutions, and other communities that rely on HPC figure out how to successfully work together, not just on software but on standards. A good first step would be joining the industry effort to work on OCI standards so that the needs of this different environment are represented in the community, and an equivalent step would be to better collaborate on software projects, training, and best practices. While collaboration does not always lead to the best outcome <a class="citation" href="#Wikipedia_contributors2021-wi">[4]</a>, arguably it is inherit in software development <a class="citation" href="#Whitehead2010-zg">[5]</a> and we have a lot to gain to work harder at doing it well.</p>
+<p>This might be more challenging than it seems at face value, because not every organization has spare developers or staff to devote to this responsibility. Discussing and maintaining standards can also be tireless, hard work.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="oci">“OpenContainers.” https://opencontainers.org.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/oci/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/oci/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="docker">“Docker.” https://docker.io.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/docker/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/docker/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="docker-hub">“Docker Hub.” https://hub.docker.com/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/docker-hub/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/docker-hub/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Wikipedia_contributors2021-wi">Wikipedia contributors, “The Mythical Man-Month,” <i>Wikipedia, The Free Encyclopedia</i>. https://en.wikipedia.org/w/index.php?title=The_Mythical_Man-Month&amp;oldid=1025350772, May-2021.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Wikipedia_contributors2021-wi/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Wikipedia_contributors2021-wi/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Whitehead2010-zg">J. Whitehead, Mistrı́k Ivan, J. Grundy, and A. van der Hoek, “Collaborative Software Engineering: Concepts and Techniques,” in <i>Collaborative Software Engineering</i>, Mistrı́k Ivan, J. Grundy, A. Hoek, and J. Whitehead, Eds. Berlin, Heidelberg: Springer Berlin Heidelberg, 2010, pp. 1–30.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Whitehead2010-zg/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Whitehead2010-zg/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

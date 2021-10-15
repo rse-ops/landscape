@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>About RSE-ops</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<div class="tabs cf" style="padding-top:20px">
+  <input type="radio" name="tabs" id="tab1" checked="" />
+  <label for="tab1">Introduction</label>
+  <input type="radio" name="tabs" id="tab2" />
+  <label for="tab2">What is Dev-ops?</label>
+  <input type="radio" name="tabs" id="tab3" />
+  <label for="tab3">What is RSE-ops?</label>
+  <input type="radio" name="tabs" id="tab4" />
+  <label for="tab4">Comparing the Two</label>
+
+  <div id="tab-content1" class="tab-content">
+  <h1 id="introduction">Introduction</h1>
+<p>Successful development, deployment, and maintenance of research software is central to scientific discovery. In the last decade, the role of Research Software Engineer (RSE) <a class="citation" href="#rse-history">[1]</a> has risen to awareness, and fostered a community of combined researchers and software developers that focus almost exclusively on this task.</p>
+<p>While some RSEs work on research software separate from its application, others are embedded in labs and responsible for data processing, analysis, and otherwise running tasks at scale to produce research outputs. These RSEs, whether they be staff at national labs, academic institutions, or private research institutes, historically have used some form of high performance computing (HPC) to achieve this scale <a class="citation" href="#Wikipedia_contributors2021-kg">[2], [3]</a>.</p>
+<p>This traditional practice has slowly been changing with the availability of cloud computing <a class="citation" href="#Scality2020-of">[4]</a>. As the technological gap between HPC and cloud computing is closing <a class="citation" href="#Guidi2020-ht">[5]</a>, and the cloud can equally meet the needs of research groups <a class="citation" href="#noauthor_2020-mn">[6]</a>, Research Software Engineers are presented with the task of working in both spaces. As they discover best practices and tools, there arises the need to write all of this knowledge down. Synthesizing what we know not only identifies what we know, but also what we don’t know and where there are gaps that require attention or work. Arguably, a mature community should have awareness of:</p>
+<ul>
+<li><p>What are functional categories of need for the community?</p></li>
+<li><p>What are best practices?</p></li>
+<li><p>What tools are out there and recommended for each use case?</p></li>
+</ul>
+<p>Further, there is separation between the developers of research software, and those that deploy it as a workflow or service. This problem isn’t new, and in fact we can look to cloud computing for inspiration. Although cloud computing goes back to the 1960s <a class="citation" href="#Foote2017-fi">[7]</a> and the term wasn’t coined until 1996 <a class="citation" href="#Scality2020-of">[4]</a>, what we are specifically interested in is DevOps – a movement that sought to bring together development of software and services ("Dev") with their deployment (operations, or "Ops") starting around 2007 <a class="citation" href="#Atlassian_undated-ka">[8]</a>. Interesting, Research Software Engineering is going through the same challenges, and would benefit from the same kind of movement.</p>
+<p>This white-paper introduces the concept of RSE-ops, or the intersection between Research Software Engineering and operations, which for research can mean running workflows or services. We present a first effort at defining relevant functional categories for the community, best practices, and the current landscape of potential areas of growth. We hope this structure can provide a basis for inspiring community and initiative around collaborative and meaningful work.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="rse-history">“A not-so-brief history of Research Software Engineers.” https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/rse-history/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/rse-history/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Wikipedia_contributors2021-kg">Wikipedia contributors, “History of supercomputing,” <i>Wikipedia, The Free Encyclopedia</i>. https://en.wikipedia.org/w/index.php?title=History_of_supercomputing&amp;oldid=1034423047, Jul-2021.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Wikipedia_contributors2021-kg/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Wikipedia_contributors2021-kg/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="xsede-history-of-hpc">“A Brief History of High-Performance Computing (HPC) -
+                  XSEDE Home - XSEDE Wiki.” https://confluence.xsede.org/pages/viewpage.action?pageId=1677620.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/xsede-history-of-hpc/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/xsede-history-of-hpc/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Scality2020-of">Scality, “The history of cloud computing - SOLVED.” https://www.scality.com/solved/the-history-of-cloud-computing/, Mar-2020.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Scality2020-of/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Scality2020-of/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Guidi2020-ht">G. Guidi, M. Ellis, A. Buluc, K. Yelick, and D. Culler, “10 Years Later: Cloud Computing is Closing the Performance
+                   Gap,” Nov. 2020.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Guidi2020-ht/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Guidi2020-ht/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="noauthor_2020-mn">“Challenging the barriers to High Performance Computing in the
+                  Cloud - HPCwire.” https://www.hpcwire.com/solution_content/aws/manufacturing-engineering-aws/challenging-the-barriers-to-high-performance-computing-in-the-cloud/, Jan-2020.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/noauthor_2020-mn/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/noauthor_2020-mn/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Foote2017-fi">K. D. Foote, “A Brief History of Cloud Computing - DATAVERSITY.” https://www.dataversity.net/brief-history-cloud-computing/, Jun-2017.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Foote2017-fi/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Foote2017-fi/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Atlassian_undated-ka">Atlassian, “History of DevOps.” https://www.atlassian.com/devops/what-is-devops/history-of-devops.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Atlassian_undated-ka/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Atlassian_undated-ka/"></a></li></ol>
+
+  <h2>Related</h2>
+  <ul>
+  <li><a href="/landscape/about/follow-devops">Why can't RSE-ops just follow or be DevOps?</a></li>
+  <li><a href="/landscape/categories/summary">A Summary Table of Categories</a></li>
+  <li><a href="/landscape/categories/opportunities">A Summary of Opportunities</a></li>
+  </ul>
+  </div>
+
+  <div id="tab-content2" class="tab-content">
+  <h2 id="what-is-devops">What is DevOps?</h2>
+<p>A definition of Research Software Engineering Operations (RSE-ops) can best be derived by first explaining the philosophy behind DevOps <a class="citation" href="#aws">[1]</a> is a term that refers to best practices to bridge development and operations. It was coined in 2008 <a class="citation" href="#devops-paper">[2]</a>, and has grown out of a web services oriented model. The term has expanded to refer to other subsets of expertise in this area such as cloud security operations, which is called "DevSecOps," adding the "Sec" for "Security." In DevOps, best practices are generally defined around:</p>
+<ol>
+<li><p>continuous integration: automated integration of code changes into a repository</p></li>
+<li><p>continuous delivery: automated release of software in short cycles</p></li>
+<li><p>monitoring and logging: tracking errors and system status in an automated way</p></li>
+<li><p>communication and collaboration: interaction between team members and optimally working together</p></li>
+<li><p>"infrastructure as code": provisioning resources through simple text files</p></li>
+<li><p>using micro-services: single function modules that can be assembled into a more complex service</p></li>
+</ol>
+<p>The above best practices are done for the purposes of speed and efficiency, reliability, scale, and collaboration. It has been shown that teams that adopt these practices can see improvements in productivity, efficiency, and quality across the board <a class="citation" href="#devops-changed-things">[3]</a>. It is a culture because along with these best practices, it also alludes to a way of thinking and working. Where there were barriers before between development and operations teams, DevOps brought them down. You can grow a community around these ideas, which is a powerful thing.</p>
+<h3 id="devops-as-the-driver-of-the-cloud">DevOps as the Driver of the Cloud</h3>
+<p>And surely the statistics are alarmingly good, as teams that practice DevOps outperform their peers in number and speed of deployments, recovery from downtime events, and employee ability to work on new things over tenuous maintenance <a class="citation" href="#devops-stats-2016">[4]</a>. Recognizing these gains and providing structure for collaboration, training, and projects was arguably just one of the goals of the Cloud Native Computing Foundation (CNCF), which was founded in 2015 <a class="citation" href="#Wikipedia_contributors2021-jt">[5]</a>. Specifically, the primary stated reason for foundation of CNCF was to foster community and support around container technologies, which often are the core unit of automation and DevOps practices <a class="citation" href="#Nishanil_undated-fk">[6]</a>). A new term, "cloud-native" was coined with this title, which is heavily reliant on DevOps. DevOps practices are considered the fundamental base of taking on a cloud-native approach, and another term, "Cloud Native DevOps" <a class="citation" href="#cloud-native-devops-oreilly">[7]</a> was even coined to specifically refer to the application of DevOps practices to the cloud. Since the two are so inexplicably intertwined, for the remainder of this paper, we will refer to them interchangeably <a class="citation" href="#Choice2020-lt">[8]</a>.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="aws">“What is Devops.” https://aws.amazon.com/devops/what-is-devops/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/aws/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/aws/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="devops-paper">“DevOps.” https://dl.acm.org/doi/10.1109/MS.2016.68.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/devops-paper/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/devops-paper/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="devops-changed-things">“DevOps: The Shift That Changed The World Of Development.” https://www.narwalinc.com/blog/devops-the-shift-that-changed-the-world-of-development/, Jul-2020.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/devops-changed-things/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/devops-changed-things/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="devops-stats-2016">P. Webteam, “2016 State of DevOps Report.” https://puppet.com/resources/report/2016-state-devops-report/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/devops-stats-2016/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/devops-stats-2016/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Wikipedia_contributors2021-jt">Wikipedia contributors, “Cloud Native Computing Foundation,” <i>Wikipedia, The Free Encyclopedia</i>. https://en.wikipedia.org/w/index.php?title=Cloud_Native_Computing_Foundation&amp;oldid=1034940082, Jul-2021.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Wikipedia_contributors2021-jt/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Wikipedia_contributors2021-jt/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Nishanil_undated-fk">nishanil, “Containers as the foundation for DevOps collaboration.” https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/docker-application-lifecycle/containers-foundation-for-devops-collaboration.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Nishanil_undated-fk/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Nishanil_undated-fk/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="cloud-native-devops-oreilly">“Cloud Native Devops.” https://www.oreilly.com/library/view/cloud-native-devops/9781492040750/ch01.html.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/cloud-native-devops-oreilly/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/cloud-native-devops-oreilly/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Choice2020-lt">E. Choice, “How DevOps is integral to a cloud-native strategy.” https://www.information-age.com/how-devops-integral-cloud-native-strategy-123488706/, Apr-2020.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Choice2020-lt/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Choice2020-lt/"></a></li></ol>
+  </div>
+
+  <div id="tab-content3" class="tab-content">
+  <h2 id="what-is-rse-ops">What is Rse-ops?</h2>
+<p>The role of Research Software Engineer (RSE) has been emerging in the last decade, and due to the hybrid nature of working environments across cloud, and HPC, DevOps practices are logically being adopted. So if DevOps is the intersection of "Developer" and "Operations," then how does this concept map to this new space, where high performance computing, or more generally, Research Software Engineering is at the forefront?</p>
+<p>Inspired by DevOps, we can define a similar term for the Research Software Engineering community to also inspire collaboration and champion best practices – RSE-ops. Research Software Engineers (RSEs) <a class="citation" href="#rse-history">[1]</a> are those individuals that write code for scientific software, and more generally support researchers to use codes on high performance computing systems, cloud services, and lab computers. Akin to traditional Software Engineers at major tech companies, they are responsible not just for software development, but also for deployment of analysis pipelines and general services. It can be noted that we are not calling the new term RseDevOps (dropping "Dev"), and this is done intentionally as the term "Research Software Engineering" encompasses this "Development" portion. RSE-ops, then, appropriately refers to best practices for ensuring the same reliability, scale, collaboration, and software engineering for research codes. We may not always be running a scaled web service, but we might be running scaled jobs on a manager, profiling performance, or testing software in development.</p>
+<p>Thus, RSE-ops is the intersection of Research Software Engineering and Operations, and generally refers to best practices for development and operations of scientific software. Arguably, the RSE community has just as much to gain by building community and putting structure around these practices. It’s important to note that while high performance computing (HPC) has traditionally been a large part of scientific computation, researchers have extended their tools to also use cloud services and other non-HPC tools, so HPC is only considered a subset of Research Software Engineering and thus RSE-ops. Many modern applications are web-based and extend beyond HPC, and so it is important to consider this set as part of the larger scientific or research software engineering universe. However, the dual need to run or deploy application across environments presents greater challenges for the community.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="rse-history">“A not-so-brief history of Research Software Engineers.” https://www.software.ac.uk/blog/2016-08-17-not-so-brief-history-research-software-engineers-0.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/rse-history/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/rse-history/"></a></li></ol>
+  </div>
+
+  <div id="tab-content4" class="tab-content">
+  <h1 id="comparison-of-rse-ops-vs.-devops">Comparison of RSE-ops vs. DevOps</h1>
+<p>The easiest way to start to map out the space of RSE-ops is to address a series of questions about people, goals, and practices, and make a direct comparison to DevOps. On a high level, RSE-ops has a stronger association with HPC, while DevOps has a stronger association with the cloud, but the lines are blurry. While early efforts of some of these clouds attempted to re-brand HPC <a class="citation" href="#google-hpc">[1]</a>, progress has been made to the point that the gap between cloud and HPC is narrowing, and HPC centers are able to take advantage of cloud technologies, and vice versa. There are still subtle differences, and ideally there could be convergence to empower researchers to use software across different platforms. For this reason, we think that making comparisons between the two can be helpful to understand what practices are well established for RSE-ops, and which require further development. Since there is a stronger association of HPC with RSE-ops, in the discussion below we will often be comparing HPC with cloud, however this does not say that there is always a strong dividing line between the two. We will proceed in the following sections to ask questions of each, speculate on best practices, and then summarize our findings in a table.</p>
+<h2 id="what-are-the-goals-of-each">What are the goals of each?</h2>
+<p>Arguably, the goals of DevOps are to provide applications and services, typically web-based. The goals of RSE-ops are to sometimes provide services for scientific applications, but more-so to provide infrastructure and means to run, develop, and distribute, scientific software. RSE-ops, then, is for research software and services, while DevOps is typically for more widely available, persistent services and corresponding software. This does not mean, however, that RSEs are never involved with DevOps, nor that industry Software Engineers are never working on research software.</p>
+<h2 id="who-is-involved">Who is involved?</h2>
+<p>You will typically find individuals practicing RSE-ops at academic institutions, national labs, and some private industry, or anywhere that high performance computing is the primary means of compute. While some companies might also use high performance computing, typically we likely find that larger companies maintain their own internal container orchestration system (e.g., Google uses Borg <a class="citation" href="#borg">[2]</a>, and smaller companies pay to use cloud services that offer a similar set of tooling. Likely this decision results from some cost-benefit analysis <a class="citation" href="#Prabhakaran2018-sn">[3]</a> that determines that one is more cost effective than the other. Whether we look at Google Cloud <a class="citation" href="#google-devops">[4]</a>, Microsoft Azure <a class="citation" href="#microsoft-devops">[5]</a> or Amazon Web Services <a class="citation" href="#aws">[6]</a>, all of these cloud environments have a primary focus on distributed, scaled, and "server-less" technologies. We might call this <a href="https://en.wikipedia.org/wiki/Cloud_native_computing">cloud computing</a>.</p>
+<p>When we look closely at individuals involved, it tends to be the case that institutions with HPC have a combination of Linux Administrators, Support Staff, Research Software Engineers, and Researchers. The Research Software Engineers in particular play an interesting role because they can sit on the administrative side (with Linux Administrators and Support Staff), on the user side (with Researchers) or somewhere in between. For this reason, they are essential staff for communication, or ensuring that the needs of the researchers are known by those that run the resources. For tech companies, it’s likely the case that a DevOps team or team of Support Reliability Engineers (SREs) is tasked with managing software and services for the company. The SREs are primarily concerned with how things should be done, and developing monitoring and other support tools, while a DevOps teams is primarily concerned with doing it <a class="citation" href="#google-sre">[7]</a>. The line gets blurry with respect to titles, because a company can have some flexibility with respect to naming these roles. However, it’s common to see titles like Software Engineer, DevOps Engineer, SRE, or even Cloud Architect.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="google-hpc">“Google HPC.” https://cloud.google.com/solutions/hpc.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/google-hpc/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/google-hpc/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="borg">“Large-scale cluster management at Google with Borg.” https://research.google/pubs/pub43438/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/borg/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/borg/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Prabhakaran2018-sn">A. Prabhakaran and L. J., “Cost-Benefit Analysis of Public Clouds for Offloading
+               In-House HPC Jobs,” in <i>2018 IEEE 11th International Conference on Cloud Computing
+               (CLOUD)</i>, 2018, pp. 57–64.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Prabhakaran2018-sn/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Prabhakaran2018-sn/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="google-devops">“DevOps.” https://cloud.google.com/devops.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/google-devops/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/google-devops/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="microsoft-devops">“DevOps.” https://azure.microsoft.com/en-us/services/devops/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/microsoft-devops/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/microsoft-devops/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="aws">“What is Devops.” https://aws.amazon.com/devops/what-is-devops/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/aws/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/aws/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="google-sre">“Google - Site Reliability Engineering.” https://sre.google/sre-book/introduction/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/google-sre/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/google-sre/"></a></li></ol>
+  <p>Continue reading about the differences for each <a href="/landscape/categories">category</a> in the space.</p>
+  </div>
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

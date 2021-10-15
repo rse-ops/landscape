@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Continuous Integration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="continuous-integration-ci-for-rse-ops-vs-devops">Continuous Integration (CI) for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>Continuous integration is an established practice of continually testing and building before deployment. It typically is focused around a version controlled code-base (e.g., GitHub or GitLab <a class="citation" href="#github">[1], [2]</a>) and developers collaborate to review code, ensure that tests pass, and then merge into a main branch. The goals are generally to ensure that when a piece or software or service hits a production resource, there will be no bugs or errors. Artifacts can be built and deployed on an event such as a merge, or for a versioned release. The benefits of CI practices are obvious, allowing developers to more easily collaborate on a code-base, and interact with production artifacts on resources of interest. For DevOps this typically includes different container orchestration services, instances, or app deployments, and for RSE-ops this would likely mean a local server or HPC cluster. The version control system also typically provides an interface to make it easy to report and respond to bugs (typically called issues) along with making suggestions to improve code (called pull or merge requests) and tracking progress. This kind of workflow fits well into any DevOps environment where change is a constant.</p>
+<p>In the context of HPC, the diversity of resources that codes need to run on proves to be a much larger challenge for CI. The most popular, public CI services are not designed to interact with a batch system. It typically isn’t sufficient to just test on a standard Linux x64, Mac, and Windows architecture, but several architectures across different operating systems (primarily Linux) that reflect the variety of the cluster nodes. The first challenge this presents is that most standard, web-based CI services (e.g., GitHub actions runners, standard GitLab runners, TravisCI, Jenkins, and CircleCI) don’t provide a rich variety of architectures or graphical processing units (GPU), or when they do, they don’t provide much control of when you get them.</p>
+<p>For this reason, for research software we typically see the developers still develop using these systems, but then are not able to test on all the systems that might be needed. The challenge is thus getting any kind of modern web-based interface linked up directly to a cluster to run tests. Work at national labs using GitLab <a class="citation" href="#Mendoza_undated-lz">[3], [4]</a>, and specifically having a locally deployed Gitlab server with custom runners on various resources <a class="citation" href="#noauthor_undated-jd">[5]</a> has been a way to unite these two worlds. Managing such an integration requires thinking about how to manage resources, user accounts, time allocations, and machine access. Another challenge is that there is is no standard workflow language for CI, and perhaps there should be.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="github">“GitHub.” https://github.com.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/github/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/github/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="gitlab">“GitLab.” https://gitlab.com.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/gitlab/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/gitlab/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Mendoza_undated-lz">T. Mendoza, “LC User Meeting.” https://hpc.llnl.gov/sites/default/files/GitLab-Status-LCuserMtg-202012-Mendoza.pdf.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Mendoza_undated-lz/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Mendoza_undated-lz/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="noauthor_undated-fv">“Welcome to the ECP CI Documentation — ECP Continuous
+                  Integration documentation.” https://ecp-ci.gitlab.io/index.html.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/noauthor_undated-fv/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/noauthor_undated-fv/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="noauthor_undated-jd">“Administration — ECP Continuous Integration documentation.” https://ecp-ci.gitlab.io/docs/admin.html.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/noauthor_undated-jd/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/noauthor_undated-jd/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

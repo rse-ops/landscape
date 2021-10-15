@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Portability</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="portability-for-rse-ops-vs-devops">Portability for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>In DevOps workflows, portability is achieved by way of using entirely isolated container environments. Although there still may be host or kernel dependencies, it’s fairly trivial on the cloud to select a different architecture for this. Running on HPC, however, is much more complex, as there is typically more of a seamless environment with the host, or if not, the need to share libraries between the container and host. Technologies such as MPI and infiniband, and more generally, complex hardware and different kinds of performance optimization setups mean that there is a trad-eoff between portability and performance <a class="citation" href="#Younge2019-uk">[1]</a>. Even if a container does run, it could be that there are huge losses in performance.</p>
+<p>The current "best practices" for this issue are generally to try binding libraries from the host into the container, or to add needed libraries from the host to the “LD_LIBRARY_PATH“ <a class="citation" href="#Younge2019-uk">[1]</a>. A better future, however, could go in one of two directions. A more hard-coded approach would be to define a standard set of metadata (e.g., labels) alongside the container, and have them checked with a hook <a class="citation" href="#oci-hooks">[2]</a> that would do a quick comparison of labels with what is available on the host. More ideally, there could be some kind of compatibility layer that is able to trace or discover libraries in the container, compare to what is available on the host, and do some kind of ABI compatibility solve to determine if the two are compatible. This work is currently underway with the BUILD SI project at Lawrence Livermore National Lab <a class="citation" href="#buildsi">[3]</a>, and discussion of such a compatibility layer has happened previously <a class="citation" href="#Younge2019-uk">[1]</a>.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="Younge2019-uk">A. J. Younge, “A Case for Portability and Reproducibility of HPC Containers,” Sandia National Lab. (SNL-NM), Albuquerque, NM (United States), SAND2019-14107C, Nov. 2019.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Younge2019-uk/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Younge2019-uk/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="oci-hooks">“opencontainers/runtime-spec hooks.” Github.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/oci-hooks/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/oci-hooks/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="buildsi">“BUILD.” https://computing.llnl.gov/projects/build.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/buildsi/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/buildsi/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Security</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="security-for-rse-ops-vs-devops">Security for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>Security is of utmost importance for HPC, and consequently the environment is much more restricted for the average user than if the same user was using the cloud. Specifically, instead of a single user having root, there are potentially thousands of users sharing the same systems, and thus the systems are structured to ensure scoped permissions. The user cannot write to anywhere in the system other than a home or work-space, and the user largely does not have control over networking, or further customizing a system provided resource. These points are related to the permissions section.</p>
+<p>Within DevOps, a community has formed around best practices for security called "DevSecOps" <a class="citation" href="#noauthor_undated-yd">[1]</a>. Although there is more freedom in the cloud, multi-tenant projects still require that different teams maintain unique namespaces, and that services are deployed to avoid any kind of security breach or intellectual property violation. Thus, DevSecOps (akin to DevOps) aims to automate having security checks for each step in the life-cycle of a cloud service. DevSecOps also is a community, and strives to increase general awareness about security best practices. This is a different approach than traditional security checks, which might have done an evaluation of a piece of software before deploying it to production, and likely this is still considered the best practice for HPC. However, ideally there could be an equivalent movement to focus and work on security best practices, culture, and community for RSE-ops.</p>
+<p>For both these groups, containers present a unique challenge, as it seems almost impossible to keep track of every container that a user might bring to a cluster or cloud environment. At best there is security scanning in the registry (and the user of the container takes notice) and the container technology is designed in a way to not allow any escalation of the user to a root user (e.g., Singularity <a class="citation" href="#singularity">[2]</a>, or Podman <a class="citation" href="#podman">[3]</a>), unlike cloud container run-times (e.g., Docker <a class="citation" href="#docker">[4]</a>).</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="noauthor_undated-yd">“What is DevSecOps?” https://www.redhat.com/en/topics/devops/what-is-devsecops.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/noauthor_undated-yd/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/noauthor_undated-yd/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="singularity">“Singularity: Scientific containers for mobility of compute.” https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0177459.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/singularity/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/singularity/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="podman">“Podman - : A tool for managing OCI containers and pods.” Jan-2018.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/podman/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/podman/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="docker">“Docker.” https://docker.io.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/docker/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/docker/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

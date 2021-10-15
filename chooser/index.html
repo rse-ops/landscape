@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Chooser Interface</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <h1 id="chooser-interface">Chooser Interface</h1>
+
+<p>This data folder includes everything needed for the chooser interface, which
+is based off of the <a href="https://github.com/stanford-rc/recommend-o-matic">recommend-o-matic</a> 
+and provides a web interface that makes it easy to display
+a list of options (typically tools) alongside filters, with the ultimate goal being to help
+a user make a choice.</p>
+
+<h2 id="1-how-do-i-prepare-tools-and-questions">1. How do I prepare tools and questions?</h2>
+
+<p>To make it easy to collaborate on sets of questions and resources, we encourage
+a workflow that has collaborative editing done in Google Sheets, and then
+export of those sheets to a tab separated file. Each sheet can then be downloaded as a tab
+separated file (tsv). We currently have the following sheets and data files:</p>
+
+<ul>
+  <li><a href="../data/containers.json">ContainersQuestions.tsv</a> generated from <a href="https://docs.google.com/spreadsheets/d/1YN8qdlMWwpPMHxReSzdRyVT14IaXzrt0yR3rbD9Xc0M/edit?usp=sharing">this sheet</a></li>
+  <li><a href="../data/containers.json">ContainersTools.tsv</a> generated from <a href="https://docs.google.com/spreadsheets/d/1YN8qdlMWwpPMHxReSzdRyVT14IaXzrt0yR3rbD9Xc0M/edit?usp=sharing">this sheet</a></li>
+</ul>
+
+<p><strong>more will be added as they are developed</strong></p>
+
+<p>We then generate json data for each pair of files for the interface.</p>
+
+<h3 id="questions">Questions</h3>
+
+<p>Each question, has a unique id (unique_id), question text (question), and set of options (options) 
+separated by commas. The included column is a flag to indicate if a question should be included or not. Blank indicates there is no information, in which case no filtering is done on that field.</p>
+
+<h3 id="tools">Tools</h3>
+
+<p>This sheet includes a listing of resources matched (via unique_id) to the questions. For each question, every option should be included that is supported by the resource.</p>
+
+<h2 id="1-how-do-i-generate-data-for-the-interface">1. How do I generate data for the interface?</h2>
+
+<p>A script is provided <a href="/landscape/chooser/chooser.py">chooser.py</a> that will validate the data, and then generate a JSON file for the interface.
+From the root of the repository:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python chooser/chooser.py <span class="nt">--help</span>
+usage: chooser.py <span class="o">[</span><span class="nt">-h</span><span class="o">]</span> <span class="o">{</span>validate,generate<span class="o">}</span> ...
+
+Chooser
+
+optional arguments:
+  <span class="nt">-h</span>, <span class="nt">--help</span>           show this <span class="nb">help </span>message and <span class="nb">exit
+
+</span>actions:
+  actions <span class="k">for </span>Chooser
+
+  <span class="o">{</span>validate,generate<span class="o">}</span>  actions
+    validate           validate tab separated files only
+    generate           validate and generate json <span class="k">for </span>the chooser.
+</code></pre></div></div>
+
+<h3 id="validate-and-generate">Validate and Generate</h3>
+
+<p>Here is how we would provide the questions and resources to the script, all located under
+<a href="chooser">chooser</a>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>chooser
+<span class="nv">$ </span>python chooser.py generate <span class="nt">--questions</span> ContainersQuestions.tsv <span class="nt">--tools</span> ContainersTools.tsv <span class="nt">--outfile</span> ../pages/data/containers.json
+Validation all tests pass.
+Writing questions and answers to ../pages/data/containers.json
+</code></pre></div></div>
+
+<p>There is also a <a href="/landscape/chooser/generate.sh">generate.sh</a> script for running bulk commands on all future data.
+If any field or mapping in either file is not valid, you’ll get a message printed to the screen:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Answer "yesno" for containers_podman:question_hpc_usage is not valid, options are
+ yes
+no
+not sure
+</code></pre></div></div>
+<p>And you can fix the file (it’s recommended to fix also in your Google Sheet, if you
+are using Google sheets) and run the script again.</p>
+
+<h4 id="force">Force</h4>
+
+<p>If the file already exists, you’ll be notified:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python chooser.py generate <span class="nt">--questions</span> ContainersQuestions.tsv <span class="nt">--tools</span> ContainersTools.tsv <span class="nt">--outfile</span> ../pages/data/containers.json
+Validation all tests pass.
+../pages/data/containers.json exists, and <span class="nt">--force</span> is not set. Will not overwrite.
+</code></pre></div></div>
+
+<p>If you want to force over-write, you can either delete the file or provide <code class="language-plaintext highlighter-rouge">--force</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python chooser.py generate <span class="nt">--questions</span> ContainersQuestions.tsv <span class="nt">--tools</span> ContainersTools.tsv <span class="nt">--outfile</span> ../pages/data/containers.json <span class="nt">--json</span>
+Validation all tests pass.
+Writing questions and answers to ../pages/data/containers.json
+</code></pre></div></div>
+
+<h3 id="validate-only">Validate Only</h3>
+
+<p>If you want to validate only, you can do that too:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python chooser.py validate <span class="nt">--questions</span> ContainersQuestions.tsv <span class="nt">--tools</span> ContainersTools.tsv
+Validation all tests pass.
+</code></pre></div></div>
+
+<h2 id="3-what-do-we-validate">3. What do we validate?</h2>
+
+<p>To ensure that the data is correct for the interface, we check the following:</p>
+
+<h3 id="validate_exists">validate_exists</h3>
+
+<p>Before we read in any data files, we must ensure that they are defined, and exist,
+period. This is fairly straight forward.</p>
+
+<h3 id="validate_not_empty">validate_not_empty</h3>
+
+<p>This validation step ensures that both data files that are read in are not empty.
+In other words, we cannot generate an interface without a list of questions and resources.
+In addition, a question column cannot be empty.</p>
+
+<h3 id="validate_row_length">validate_row_length</h3>
+
+<p>For each of the resources and questions tab separated files, a row of different
+length indicates that there is possibly missing data. This step ensures that all rows
+have the same length before moving on, that way we don’t hit other indexing errors
+further along in processing.</p>
+
+<h3 id="validate_columns">validate_columns</h3>
+
+<p>We want to make sure that the data for the interface includes the fields
+that will be expected, and required. We also want to make sure that if a question
+is defined in the resources data, but not defined in the questions data, we
+alert the creator that he or she is referencing a question that does not exist.</p>
+
+<h3 id="validate_question_answers">validate_question_answers</h3>
+
+<p>Since each resource provides answers to questions defined in our questions data,
+we not only need to validate that the questions are valid, but also that the answer
+provided is known. For example, if my answer to a question is “I want to use web services”
+but valid options for the question doesn’t include this string, we want to alert the user that
+there is either a typo, or that the new answer should be added as a valid answer.</p>
+
+<h2 id="4-how-do-i-create-and-deploy-the-interface">4. How do I create and deploy the interface?</h2>
+
+<p>After a new set of data files is added for a particular resource, you should:</p>
+
+<ol>
+  <li>Generate the data file to be under <a href="pages/data">pages/data</a></li>
+  <li>Generate a new chooser file named by the category slug under <a href="pages/choosers">pages/choosers</a>. Use an existing one for a template. The data file references is in the <code class="language-plaintext highlighter-rouge">pages/data</code> folder.</li>
+  <li>Change <code class="language-plaintext highlighter-rouge">chooser: false</code> to <code class="language-plaintext highlighter-rouge">chooser: true</code> under <a href="_data/rse-ops.yaml">_data/rse-ops.yaml</a></li>
+</ol>
+
+<p>Then you can preview the site to make sure things look as expected!
+The base template for the chooser is <a href="_layouts/chooser.html">_layouts/chooser.html</a>.</p>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

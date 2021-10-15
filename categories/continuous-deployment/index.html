@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Continuous Deployment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="continuous-deployment-cd-for-rse-ops-vs-devops">Continuous Deployment (CD) for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>Continuous deployment is the step after continuous integration finishes, namely the deployment or archive of build artifacts for use in production. For DevOps, this typically means pushing containers to a registry where they can be pulled to some production or testing environment.</p>
+<p>On HPC the software is optimally installed on bare metal instead of relying on containers or some kind of container orchestrator. For HPC it’s also up to workload managers <a class="citation" href="#slurm">[1], [2]</a> to run the software. These resources are also typically protected, and not easily accessible from a web interface.</p>
+<p>For RSE-ops on HPC, a similar approach using containers could be adopted, however due to the private nature of software it could be that registries and services are internal. A self-deployed CI service (e.g., Jenkins or GitLab <a class="citation" href="#jenkins">[3], [4]</a>) that has access to cluster resources could either deploy an artifact or use SSH to execute a command to do similar. A container could be pushed to an open source or internal registry. One important question that results from this is how to control access and security. If a user builds a container in CI, how is it assessed or scanned to be safe to deploy? There is also one additional level of complexity with providing containers with different architectures to run optimally on the system. Finally, build caches (meaning binary packages) would be an equally good solution, or in fact a supplement. Build caches are ideal for reuse, and containers for reproducibility.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="slurm">“SLURM: Simple Linux Utility for Resource Management.” https://link.springer.com/chapter/10.1007/10968987_3.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/slurm/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/slurm/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="flux">“Flux Framework.” https://flux-framework.org/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/flux/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/flux/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="jenkins">“Jenkins.” https://jenkins.io.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/jenkins/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/jenkins/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="gitlab">“GitLab.” https://gitlab.com.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/gitlab/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/gitlab/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scaling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="scaling-for-rse-ops-vs-devops">Scaling for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>High performance computing was designed for scaling, but it must be done intentionally. By way of job managers <a class="citation" href="#slurm">[1], [2]</a>, Message Passing Interface (MPI) programming <a class="citation" href="#mpi">[3]</a>, and extreme parallelism <a class="citation" href="#insidehpc-hpc">[4]</a>, it’s possible to scale a task on an HPC cluster. Libraries like MPI are tested and can be used by HPC experts to run parallel applications.</p>
+<p>This is in contrast to some traditional DevOps tools that handle scaling or scaled testing for the user, and typically have a strategy of deploying many separate instances up or out instead of using a connected fabric <a class="citation" href="#Reese_undated-rm">[5]</a>. A prime example is the container orchestration tool Kubernetes <a class="citation" href="#k8">[6]</a>, which centers are starting to deploy alongside traditional resources, possibly allowing RSE-ops to better overlap with DevOps. Emerging tools like the Flux Framework <a class="citation" href="#flux">[2]</a> are further closing the gap between traditional HPC managers and container orchestration tools. The work remaining to be done is bridging the gap between the developers of the tools and the user base. If it isn’t infinitely easy for a user to launch a job, then arguably the frameworks and techniques are not successful. There is a huge opportunity for development of RSE-ops tools that can better teach and possibly automate this scaling. There is also opportunity for cloud or DevOps practices to learn from traditional HPC and think about providing similar options.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="slurm">“SLURM: Simple Linux Utility for Resource Management.” https://link.springer.com/chapter/10.1007/10968987_3.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/slurm/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/slurm/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="flux">“Flux Framework.” https://flux-framework.org/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/flux/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/flux/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="mpi">“MPI: A message passing interface.” https://ieeexplore.ieee.org/document/1263546.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/mpi/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/mpi/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="insidehpc-hpc">“Inside HPC Future Technologies.” https://insidehpc.com/2017/03/future-technologies-rise-hpc/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/insidehpc-hpc/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/insidehpc-hpc/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="Reese_undated-rm">G. Reese, <i>Cloud Application Architectures</i>. O’Reilly Media, Inc.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/Reese_undated-rm/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/Reese_undated-rm/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="k8">“Towards a Framework for Monitoring and Analyzing High Performance Computing Environments Using Kubernetes and Prometheus.” https://ieeexplore.ieee.org/document/9060302.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/k8/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/k8/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

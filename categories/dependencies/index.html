@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dependencies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="dependencies-for-rse-ops-vs-devops">Dependencies for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>Dependency management refers to a set of practices used to manage software versions. It is arguably a subtopic of software distribution. Every piece of scientific software requires a specific set of versioned dependencies, and these dependencies must co-exist alongside one another on a shared resource. This also means that architectures must be maintained for possibly older dependencies that require them. Tools have grown out of this need that allow for flexible management of dependencies and software, including easybuild <a class="citation" href="#easybuild">[1]</a>, spack <a class="citation" href="#spack">[2]</a>, and environment modules <a class="citation" href="#LMOD">[3], [4]</a>. Development of these projects has also led to a powerful model of development – bringing many people (administrators and users) together to collaborate on the software. It’s not hard to read user surveys <a class="citation" href="#spack-user-survey">[5]</a> and see that the open source model of development, when done right, is successful. People are using the software, excited about it, and working together to make it better. It also doesn’t hurt that some of these projects have the backing of entire institutions and within- and inter-institutional funding programs and resources.</p>
+<p>These success stories give us a hint that working together on software, likely in an open source, collaboration fashion, is a good model for successful distribution and improvement of the software. This does not imply that collaboration is always, universally better <a class="citation" href="#noauthor_undated-bo">[6]</a>, but the authors here believe that it’s an honorable if not idealistic goal to strive for. The challenge here, of course, is the extra work that it takes to seek out, interact with, and inform contributors. Not everyone may agree that software can and should be open and collaborative, and it may even depend on the kind of software in question.</p>
+<p>DevOps is different because you only install what you need, and when you need it. It’s uncommon to require older versions of the same software to co-exist for a service. Is there any kind of mapping of this freedom to research software engineering? Yes, arguably containerization, primarily with container technologies suitable for an HPC environment <a class="citation" href="#singularity">[7], [8], [9]</a>, has allowed for encapsulation of an entire operating system and software stack that can be used in a portable manner. However, as was noted in the description of testing, development and deployment of these containers is unlikely to be on the resource itself. Ultimately, if we can better use unprivileged container technologies, running builds on clusters could be possible.</p>
+<p>There also, until recently <a class="citation" href="#shpc">[10]</a> has not been an easy way for a cluster user or Linux administrator to install, manage, and provide containers. External registries that might be used <a class="citation" href="#sregistry">[11], [12]</a> must exist alongside a resource and then require an individual to explicitly pull a container binary. While this is better than not having containers available at all, it creates redundancy of file-system space, and requires the individual to be a stickler about container versions pulled, good practices, and organization of said containers. This is not an easy thing to do, and thus it’s hard to follow best practices <a class="citation" href="#ten-simple-rules">[13]</a>. Development of these technologies, however, hinted at the idea that with some innovation, it could be possible to empower users to better embrace more DevOps style practices of developing, testing, and deploying research software (RSEops). It also hinted at a more modular strategy for dependency management. Interestingly, containers are used heavily by both cloud and HPC developers, but developing them and ensuring security in their execution adds additional challenges.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="easybuild">“EasyBuild.” https://easybuild.io/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/easybuild/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/easybuild/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="spack">“Spack.” https://spack.io/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/spack/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/spack/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="LMOD">“LMOD.” https://lmod.readthedocs.io/en/latest/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/LMOD/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/LMOD/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="environment-modules">“Environment Modules.” https://modules.readthedocs.io/en/latest/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/environment-modules/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/environment-modules/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="spack-user-survey">“Spack User Survey.” https://spack.io/spack-user-survey-2020/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/spack-user-survey/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/spack-user-survey/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="noauthor_undated-bo">“The Mythical Man Month.”</span>
+    <a style="font-size:16px" href="/landscape/paper-details/noauthor_undated-bo/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/noauthor_undated-bo/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="singularity">“Singularity: Scientific containers for mobility of compute.” https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0177459.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/singularity/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/singularity/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="charlie">“Charliecloud: unprivileged containers for user-defined software stacks in HPC.” https://dl.acm.org/doi/10.1145/3126908.3126925.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/charlie/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/charlie/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="shifter">“Shifter.” https://github.com/NERSC/shifter.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/shifter/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/shifter/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="shpc">“Singularity Registry HPC.” https://singularity-hpc.readthedocs.io.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/shpc/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/shpc/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="sregistry">“Singularity Registry.” https://joss.theoj.org/papers/10.21105/joss.00426.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/sregistry/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/sregistry/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="distribution-spec">“OCI Distribution Spec.” https://github.com/opencontainers/distribution-spec.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/distribution-spec/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/distribution-spec/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="ten-simple-rules">“Ten simple rules for writing Dockerfiles for reproducible data science.” https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008316.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/ten-simple-rules/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/ten-simple-rules/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>

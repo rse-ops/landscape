@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Distribution</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <meta http-equiv="content-language" content="en">
+  <link href="/landscape/assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Slab:400,700">
+  <link rel="icon" type="image/png" href="/landscape/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+</head>
+<body>
+  <div class="container">
+    <ul id="filters" class="clearfix">
+  <li><span class="filter"><a style="color:white" href="/landscape/">Rse-ops</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/about">Background</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/categories">Categories</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/choosers">Choose A Tool</a></span></li>
+  <li><span class="filter"><a style="color:white" href="/landscape/projects">Projects</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/sitemap">Sitemap</a></span></li>
+  <li style="float:right"><span class="filter"><a style="font-weight:600" href="https://github.com/rse-ops/landscape" target="_blank">&lt;/&gt;</a></span></li>
+  <li style="float:right"><span class="filter"><a style="color:white" href="/landscape/src/rse-ops.pdf" target="_blank">PDF</a></span></li>
+</ul>
+
+<p><img src="/landscape/assets/img/rse-sun.png" style="display:block;margin:auto;" /></p>
+
+<h2 id="software-distribution-for-rse-ops-vs-devops">Software Distribution for RSE-ops vs. DevOps</h2>
+
+<div class="card">
+
+<p>The end-goal of an HPC environment is to make software available to researchers. This is abstractly similar to the "end goal" of a cloud environment, which is to make software available to users via services. For the cloud, this typically means interactive web interfaces or services that are accessed from other web or terminal clients via application programming interfaces (APIs). Since HPC environments are typically running jobs that rely on system software and some number of known aliases, the bulk majority of "software distribution" for HPC is probably command line interfaces. In this framework, the administrators must provide an easy way to manage a collection of software, and make it available to users, and app developers that maintain their own deployments have to develop within that. At best, you can create modular structure and exposure of different software via file-system organization (e.g., putting apps in ‘/project‘) and using environment modules <a class="citation" href="#LMOD">[1], [2], [3]</a> (e.g., ‘module load‘ only what you need).</p>
+<p>Users are somewhat empowered to install their own software, given that 1. they have the file-system space to do so, and 2. installation does not require any escalated permissions on the system. While this could mean a "bring your own environment" scenario via containers pulled from external registries, more likely it means relying on package managers and module systems. Another solution to this problem could be from better HPC container run-times.</p>
+<p>Ideally, every module and package would have a suite of tests to ensure its functionality, but in real world scenarios its likely that the software is tested elsewhere (e.g., a CI service associated with the source code) and distributed to the system for immediate usage.</p>
+<br />
+
+<ol class="bibliography"><li><div>
+    <div style="font-size:16px"><span id="LMOD">“LMOD.” https://lmod.readthedocs.io/en/latest/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/LMOD/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/LMOD/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="environment-modules">“Environment Modules.” https://modules.readthedocs.io/en/latest/.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/environment-modules/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/environment-modules/"></a></li>
+<li><div>
+    <div style="font-size:16px"><span id="shpc">“Singularity Registry HPC.” https://singularity-hpc.readthedocs.io.</span>
+    <a style="font-size:16px" href="/landscape/paper-details/shpc/">[bibtex]</a>
+    </div>
+</div>
+
+<a class="details" href="/paper-details/shpc/"></a></li></ol>
+
+</div>
+
+  </div>
+<br>
+<br>
+<img id="footer" src="/landscape/assets/img/grass.png">
+</div>
+</body>
+</html>
