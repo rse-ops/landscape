@@ -2,7 +2,7 @@
   description: Includes system administrators, research software engineers, and other staff that support a research ecosystem.  This does not include domain-specific software, is not limited to running on HPC, and it only includes open source.
   categories:
     - name: Containerization
-      description: Container technologies are usefor across all areas of Rse-ops, including distribution, testing, workflows, and supporting reproducibility.
+      description: Container technologies are use for across all areas of Rse-ops, including distribution, testing, workflows, and supporting reproducibility.
       slug: containers
       paper_sections: 
        - containers
@@ -167,7 +167,7 @@
 
       matrix:
         - name: hpc
-          description: Do you want a scjeduler for HPC?
+          description: Do you want a scheduler for HPC?
           values:
             slurm: yes
             torque: yes
