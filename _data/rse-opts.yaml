@@ -131,6 +131,10 @@
           img: cassandra.png
         - name: CouchDB
           img: couch.png
+        - name: InfluxDB
+          img: TBD.png
+        - name: elasticsearch
+          img: TBD.png
 
       matrix:
         - name: relational
@@ -146,6 +150,8 @@
             neo4j: no
             cassandra: yes
             couchdb: no
+            influxdb: no
+            elasticsearch: no
 
     - name: Orchestration and Scheduling
       description: Schedulers and orchestrator allow us to scale running workflows or analyses, regardless if we are on HPC or cloud.
