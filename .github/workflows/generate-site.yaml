@@ -22,11 +22,12 @@ jobs:
 
       - name: Build Jekyll site
         run: |
-          set -xo pipefail
+          set -euxo pipefail
           rm -rf _site/*
           docker run --rm \
             -v "$PWD:/srv/jekyll" -v "$PWD/_site:/srv/jekyll/_site" \
-               jekyll/builder:4.0 /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future && chmod -R 777 /srv/jekyll"
+               --entrypoint /bin/bash \
+               jekyll/builder:4.0 -lc "cd /srv/jekyll && chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build --future && chmod -R 777 /srv/jekyll"
 
       - name: Deploy to gh-pages
         if: (github.event_name == 'push')
