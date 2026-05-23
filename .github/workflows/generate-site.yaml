@@ -24,13 +24,42 @@ jobs:
         run: |
           set -euxo pipefail
           rm -rf _site/*
-          docker run --rm \
+          docker run --rm -i \
             -e HOME=/tmp \
             -e BUNDLE_PATH=/tmp/bundle \
             --user "$(id -u):$(id -g)" \
             -v "$PWD:/srv/jekyll" -v "$PWD/_site:/srv/jekyll/_site" \
                --entrypoint /bin/bash \
-               jekyll/builder:4.0 -lc "cd /srv/jekyll && bundle install && bundle exec jekyll build --future"
+               jekyll/builder:4.0 <<'EOF'
+          set -euxo pipefail
+          cd /srv/jekyll
+          bundle install
+          ruby <<'RUBY'
+          replacements = {
+            Dir["/tmp/bundle/ruby/*/gems/bibtex-ruby-4.4.7/lib/bibtex/bibliography.rb"].first => {
+              "        data.each(&Proc.new)" => "        data.each { |entry| yield(entry) }",
+              "      block = if block_given?\n        Proc.new\n      else\n        Proc.new { |e| e[field] = value }\n      end" => "      updater = block_given? ? proc { |entry| yield(entry) } : proc { |entry| entry[field] = value }",
+              "          block.call(entry)" => "          updater.call(entry)",
+              "        q('@entry').each(&Proc.new)" => "        q('@entry').each { |entry| yield(entry) }",
+              "      block = Proc.new if block_given?" => "      block = proc { |*args| yield(*args) } if block_given?"
+            },
+            Dir["/tmp/bundle/ruby/*/gems/bibtex-ruby-4.4.7/lib/bibtex/entry.rb"].first => {
+              "        fields.each(&Proc.new)" => "        fields.each { |key, value| yield(key, value) }",
+              "      block_given? ? dup.convert!(*filters, &Proc.new) : dup.convert!(*filters)" => "      block_given? ? dup.convert!(*filters) { |key, value| yield(key, value) } : dup.convert!(*filters)"
+            }
+          }
+          replacements.each do |path, mapping|
+            abort("missing target file") unless path && File.exist?(path)
+            content = File.read(path)
+            mapping.each do |before, after|
+              abort("missing snippet in #{path}: #{before}") unless content.include?(before)
+              content = content.sub(before, after)
+            end
+            File.write(path, content)
+          end
+          RUBY
+          bundle exec jekyll build --future
+          EOF
 
       - name: Deploy to gh-pages
         if: (github.event_name == 'push')
