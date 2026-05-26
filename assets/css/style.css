@@ -1,0 +1,493 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none !important;
+  color: #741755;
+}
+
+a:visited {
+  color: #8a4a72;
+}
+
+body {
+  font-family: Helvetica, Arial, Verdana;
+  background: #005dab;
+}
+
+#footer {
+   position:fixed;
+   bottom:0px;
+   width:100%;
+   height:60px;
+}
+
+h1, h2 {
+  margin-top: 0;
+  line-height: 1.25;
+  font-family: "Roboto Slab", Times, "Times New Roman", serif;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  transition: all 1s ease;
+}
+
+#filters {
+  margin: 1%;
+  padding: 0;
+  list-style: none;
+}
+
+#filters li {
+  float: left;
+}
+
+#filters li span {
+  display: block;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #005dab;
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+
+#filters li span:hover {
+  color: darkorange;
+}
+
+#filters li span.active {
+  background: #741755;
+  color: #333;
+}
+
+#portfoliolist .portfolio {
+  width: 23%;
+  margin: 1%;
+  display: none;
+  float: left;
+  overflow: hidden;
+}
+
+.portfolio-wrapper {
+  overflow: hidden;
+  position: relative !important;
+  cursor: pointer;
+}
+
+.portfolio img {
+  max-width: 100%;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio .label {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  bottom: -40px;
+  -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio .label-bg {
+  background: #222;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.portfolio .label-text {
+  color: #fff;
+  position: relative;
+  z-index: 500;
+  padding: 5px 8px;
+}
+
+.portfolio .text-category {
+  display: block;
+  font-size: 9px;
+}
+
+/* This is a card background for text */
+
+.card {
+   padding: 25px;
+   border-radius: 10px;
+   background-color: white;
+}
+
+.portfolio:hover .label {
+  bottom: 0;
+}
+
+.portfolio:hover img {
+  top: -30px;
+}
+
+/* This is a category card */
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.6%;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+}
+.category-card a {
+  color: inherit;
+}
+.category-card a:hover {
+  color: #741755;
+}
+.category-card:hover .photo {
+  transform: scale(1.3) rotate(3deg);
+}
+.category-card .meta {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+}
+.category-card .photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
+.category-card .details,
+.category-card .details ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.category-card .details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  margin: auto;
+  transition: left 0.2s;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.category-card .details a {
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+}
+.category-card .details ul li {
+  display: inline-block;
+}
+.category-card .details .author:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.category-card .details .date:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.category-card .details .tags ul:before {
+  font-family: FontAwesome;
+  content: "";
+  margin-right: 10px;
+}
+.category-card .details .tags li {
+  margin-right: 2px;
+}
+.category-card .details .tags li:first-child {
+  margin-left: -4px;
+}
+.category-card .description {
+  padding: 1rem;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.category-card .description h1,
+.category-card .description h2 {
+  font-family: Poppins, sans-serif;
+}
+.category-card .description h1 {
+  line-height: 1;
+  margin: 0;
+  font-size: 1.7rem;
+}
+.category-card .description h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  margin-top: 5px;
+}
+.category-card .description .read-more {
+  text-align: right;
+}
+.category-card .description .read-more a {
+  color: #741755;
+  display: inline-block;
+  position: relative;
+}
+.category-card .description .read-more a:hover:after {
+  margin-left: 5px;
+  opacity: 1;
+}
+.category-card p {
+  position: relative;
+  margin: 1rem 0 0;
+}
+.category-card p:first-of-type {
+  margin-top: 1.25rem;
+}
+.category-card p:first-of-type:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background: #741755;
+  width: 35px;
+  top: -0.75rem;
+  border-radius: 3px;
+}
+.category-card:hover .details {
+  left: 0%;
+}
+@media (min-width: 640px) {
+  .category-card {
+    flex-direction: row;
+    max-width: 700px;
+  }
+  .category-card .meta {
+    flex-basis: 40%;
+    height: auto;
+  }
+  .category-card .description {
+    flex-basis: 60%;
+  }
+  .category-card .description:before {
+    transform: skewX(-3deg);
+    content: "";
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .category-card.alt {
+    flex-direction: row-reverse;
+  }
+  .category-card.alt .description:before {
+    left: inherit;
+    right: -10px;
+    transform: skew(3deg);
+  }
+  .category-card.alt .details {
+    padding-left: 25px;
+  }
+}
+
+/* #Tablet (Portrait) */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+}
+
+
+/*  #Mobile (Portrait) - Note: Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+  #portfoliolist .portfolio {
+    width: 48%;
+    margin: 1%;
+  }
+  #ads {
+    display: none;
+  }
+}
+
+
+/* #Mobile (Landscape) - Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: 70%;
+  }
+  #ads {
+    display: none;
+  }
+}
+
+
+/* #Clearing */
+
+
+/* Self Clearing Goodness */
+
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+
+.row,
+.clearfix {
+  zoom: 1;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* Tabs for content */
+
+/* tabs */
+.tabs {
+  border-right: 1px solid #ccc;
+}
+.tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tabs input[type=radio] {
+  display: none;
+}
+.tabs label {
+  display: block;
+  float: left;
+  width: 25%;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-right: none;
+  background-color: #f7f7f7;
+  text-align: center;
+  font-weight: 700;
+  color: #741755;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+.tabs label:hover {
+  background-color: white;
+}
+.tabs [id^=tab]:checked + label {
+  border-bottom-color: white;
+  background: white;
+  color: #333;
+}
+
+.tab-content {
+  display: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  float: left;
+  width: 100%;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: white;
+  line-height: 26px;
+}
+
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4 {
+  display: block;
+}
+
+.other-content {
+  color: white;
+}
+
+/* Simple table style */
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
