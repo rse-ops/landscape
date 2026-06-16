@@ -75,10 +75,13 @@
           img: julia.png
         - name: Go 
           img: go.png
+        - name: Java
+          img: TBD.png
 
       # TODO add other languages, C/C++/Fortran
+      # TODO decide how to deal with language extensions like CUDA, SYCL, OpenCL, OpenMP, MPI, threading building blocks and so on 
   
-      # Python, R, Julia, Go
+      # Python, R, Julia, Go, Java
       matrix:
         - name: compiled
           description: Are you looking for a compiled language?
@@ -87,6 +90,7 @@
             julia: yes
             r: no
             go: yes
+            java: both
 
         - name: scientific_programming
           description: Do you want a language that is traditionally for scientific programming?
@@ -95,6 +99,7 @@
             julia: yes
             r: yes
             go: no
+            java: ??
 
         - name: web_interfaces
           description: Do you want a language that can be used to develop front and back end?
@@ -103,6 +108,7 @@
             julia: no
             r: yes
             go: yes
+            java: yes
 
     - name: Database
       description: Databases are a subset of scientific software that allow us to save and query larger amounts of data in a systematic way.
