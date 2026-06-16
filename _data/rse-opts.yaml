@@ -45,20 +45,30 @@
       paper_sections:
         - scientific-software
       entries:
+        - name: AMD Optimized C/C++ Compiler (AOCC)
+          img: TBD.png
+        - name: Cray Compiling Environment (CCE)
+          img: cray.png
+        - name: clang/flang (LLVM)
+          img: clang.jpeg
         - name: gcc
           img: gcc.svg
-        - name: intel
+        - name: IBM XL C/C++/Fortran
+          img: TBD.png
+        - name: Intel Parallel Studio XE (Intel classic Compilers icc/ifort)
           img: intel.png
-        - name: cce
-          img: cray.png
+        - name: Intel® oneAPI DPC++/C++ Compiler (New Clang/LLVM based compiler)
+          img: TBD.png
+        - name: NAG Fortran Compiler
+          img: TBD.png
+        - name: ncc/nc++/nfort (NEC Software Development Kit for Vector Engine)
+          img: TBD.png
         - name: pgi
           img: pgi.png
-        - name: clang
-          img: clang.jpeg
-        - name: mpicc    
-          img: mpicc.png
 
       # TODO I don't have the expertise to help choose compilers!, aside from languages...
+      # With LLVM as backend end clang/flang as frontend we have to decide what we want to address. Especial since AOCC use for example LLVM as well as
+      # the new intel compiler as far as I know
 
     - name: Programming Languages
       description: Programming languages are another cornerstone of of RSE-ops and scientific software. As programmers, we love and need them.
